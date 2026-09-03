@@ -2,11 +2,9 @@
 
 import { createContext, useContext, useState, type ReactNode } from "react";
 
-type ReserveTier = "quickfix" | "full";
-
 type ModalContextValue = {
-  reserveOpen: false | ReserveTier;
-  openReserve: (tier: ReserveTier) => void;
+  reserveOpen: boolean;
+  openReserve: () => void;
   closeReserve: () => void;
   sampleOpen: boolean;
   sampleIndex: number;
@@ -17,7 +15,7 @@ type ModalContextValue = {
 const ModalContext = createContext<ModalContextValue | null>(null);
 
 export function ModalProvider({ children }: { children: ReactNode }) {
-  const [reserveOpen, setReserveOpen] = useState<false | ReserveTier>(false);
+  const [reserveOpen, setReserveOpen] = useState(false);
   const [sampleOpen, setSampleOpen] = useState(false);
   const [sampleIndex, setSampleIndex] = useState(0);
 
@@ -25,7 +23,7 @@ export function ModalProvider({ children }: { children: ReactNode }) {
     <ModalContext.Provider
       value={{
         reserveOpen,
-        openReserve: (tier) => setReserveOpen(tier),
+        openReserve: () => setReserveOpen(true),
         closeReserve: () => setReserveOpen(false),
         sampleOpen,
         sampleIndex,
@@ -46,5 +44,3 @@ export function useModal() {
   if (!ctx) throw new Error("useModal must be used within a ModalProvider");
   return ctx;
 }
-
-export type { ReserveTier };

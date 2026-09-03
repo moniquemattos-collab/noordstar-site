@@ -1,64 +1,27 @@
 export type Language = "en" | "nl";
 
-export type HeroVariantKey =
-  | "default"
-  | "staff"
-  | "admin"
-  | "time"
-  | "margin"
-  | "leaks";
-
-export const DEFAULT_HERO_VARIANT: HeroVariantKey = "default";
-
 const en = {
   meta: {
-    title:
-      "Noordstar — What could AI actually fix in your business? | Practical, independent advice for small businesses",
+    title: "Noordstar — One business problem. One practical AI fix. €49",
     description:
-      "Tell us what's slowing your business down. Get a free first check, a €49 Quick Fix, or a full independent plan — practical advice, no AI hype.",
+      "Describe one thing that's wasting time in your business. Get a short, practical plan within 2 business days — reviewed by a named specialist. €49, full refund if it's not useful.",
   },
   nav: {
-    whatYouGet: "What you get",
-    method: "Proof",
+    product: "Example",
     howItWorks: "How it works",
     pricing: "Pricing",
     faq: "FAQ",
-    cta: "Get your plan",
   },
   hero: {
     eyebrow: "AI for normal businesses. Explained normally.",
-    primaryCta: "Tell us what's wasting your time →",
-    secondaryCta: "How it works",
+    h1: "Everyone keeps talking about AI. What could it actually fix in your business?",
+    sub: "You don't need a big AI transformation. Sometimes one small change saves hours of frustrating work every week. Tell us what's getting in your way — we'll tell you whether there's a smarter way to do it.",
     reassurance:
       "You don't need to understand AI. That's our job. No sales calls, no agency pitch.",
     trust:
-      "Reviewed by a named analyst · Delivered in 5 working days · 100% independent — we don't sell implementation",
-    variants: {
-      default: {
-        h1: "Everyone keeps talking about AI. What could it actually fix in your business?",
-        sub: "You don't need a big AI transformation. Sometimes one small change saves hours of frustrating work every week. Tell us what's getting in your way — we'll tell you whether there's a smarter way to do it.",
-      },
-      staff: {
-        h1: "Short on staff? Some of that work doesn't need a person.",
-        sub: "Answering routine emails, drafting quotes, chasing invoices, planning jobs — we'll show you which of these could run on their own, which shouldn't, and exactly where to start. You decide who helps you build it.",
-      },
-      admin: {
-        h1: "Quotes, invoices, forms, follow-ups — how much of your week is admin?",
-        sub: "We'll map how your business actually works and show you exactly which tasks could be automated — like turning a site visit into a written quote, or sending payment reminders automatically — and which honestly shouldn't be.",
-      },
-      time: {
-        h1: "Still answering every customer email yourself?",
-        sub: "Routine questions, appointment scheduling, order updates — we'll work out what could run without you, what shouldn't, and the exact steps to hand it over. So you get your week back.",
-      },
-      margin: {
-        h1: "Can't raise your prices? Then stop paying for wasted hours.",
-        sub: "Re-typing data between systems, manual planning, invoices that go out late — we'll find where your processes leak time and money, and rank the fixes by what they'll actually save you.",
-      },
-      leaks: {
-        h1: "A quote sent three days late is a customer lost.",
-        sub: "Slow quotes, forgotten follow-ups, late invoices — we'll show you which of these a simple automation could fix, which need a process change instead, and what to tackle first.",
-      },
-    },
+      "Reviewed by a named specialist · Delivered within 2 business days · 100% independent — we don't sell implementation",
+    primaryCta: "Tell us the problem — €49",
+    secondaryCta: "See how it works ↓",
   },
   recognition: {
     h2: "Does any of this sound familiar?",
@@ -70,9 +33,8 @@ const en = {
       "Someone copies information from emails into Excel every day.",
       "We waste hours chasing unpaid invoices.",
     ],
-    closingText:
-      "Sound familiar? Most of these have a simpler fix than you'd think — and it usually doesn't require an “AI transformation.”",
-    closingLink: "Tell us yours, free →",
+    closing:
+      "Every one of these has been solved before — usually with something much simpler than an “AI transformation.” That's what a Quick Fix is for.",
   },
   freeCheck: {
     h2: "Start free: tell us about ONE annoying problem",
@@ -81,41 +43,53 @@ const en = {
     placeholder:
       "Your form will appear here — connect TALLY_FORM_URL in components/FreeCheck.tsx.",
   },
+  productDemo: {
+    h2: "One problem. One practical fix. €49.",
+    intro:
+      "You describe one thing that's wasting your time. Within 2 business days you get a short, practical plan — reviewed by a named specialist. Here's a real example:",
+    cardLabel: "Quick Fix plan · Sample",
+    problemLabel: "The problem",
+    problemText:
+      "“I get 100+ emails a day. I can't keep up — I tell customers to just WhatsApp me.”",
+    foundLabel: "What we found",
+    foundText:
+      "It's not an email problem — it's a sorting problem. Four different streams land in one pile, and the valuable 10% drowns in the routine 90%.",
+    fixLabel: "The simplest fix",
+    fixText:
+      "Sorting rules → five template replies → AI for drafting (not sending). No chatbot. No new software.",
+    diyLabel: "Do it yourself",
+    diyText: "3 steps, ±2 hours, this week.",
+    difficultyLabel: "Difficulty",
+    difficultyValue: "Easy",
+    costLabel: "Likely cost",
+    costValue: "€0–25/month",
+    dontDoLabel: "Don't do",
+    dontDoText:
+      "Don't buy a chatbot. Don't switch email providers. Don't start a CRM project.",
+    closing: "Have something like this in your business?",
+  },
   process: {
-    h2: "Here's how it works — it's genuinely this simple.",
+    h2: "How it works",
     steps: [
       {
-        title: "You tell us about your business",
-        text: "a structured questionnaire, ±35 minutes, in plain language. What you do, how work gets done, what frustrates you.",
+        title: "Tell us the problem",
+        text: "describe it in your own words, plus a few quick questions (which tools you use, how often it happens). ±5 minutes.",
       },
       {
-        title: "We analyse it",
-        text: "using a structured method and advanced AI tools. A named human specialist reviews every recommendation before it reaches you.",
+        title: "Pay €49",
+        text: "secure checkout, iDEAL. Excl. VAT, B2B.",
       },
       {
-        title: "You get a clear plan",
-        text: "what's worth doing, what isn't, what to do first, and exactly how to get it done — yourself or with any provider you choose.",
+        title: "We investigate",
+        text: "AI helps us analyse fast; a named human specialist reviews everything before it reaches you.",
+      },
+      {
+        title: "Your plan arrives within 2 business days",
+        text: "what we found, what we'd do, how to do it yourself, what it'll cost, what NOT to do, and when you'd need professional help.",
       },
     ],
-  },
-  example: {
-    h2: "What that looks like in practice",
-    turns: [
-      {
-        label: "You tell us",
-        text: "“I get 100+ emails a day. I can't keep up — I've started telling customers to just WhatsApp me.”",
-      },
-      {
-        label: "We investigate",
-        text: "what types of email actually arrive, which ones repeat, what your email program can already do, and where AI genuinely helps.",
-      },
-      {
-        label: "You receive",
-        text: "“Don't buy anything yet. Your inbox needs sorting rules, five template replies, and AI for drafting — not a chatbot. Here's the exact setup, what it costs (probably €0), and what NOT to do.”",
-      },
-    ],
-    closing:
-      "That's a Quick Fix. €49. Most problems are simpler than the people selling AI want you to believe.",
+    guarantee:
+      "If your plan isn't practical and usable, we refund it. Simple as that.",
   },
   whatYouGet: {
     h2: "What you'll have in your hands after 5 days",
@@ -153,7 +127,7 @@ const en = {
   },
   independence: {
     h2: "We have nothing else to sell you. That's the point.",
-    body: "Plenty of agencies offer free “AI scans” — and their conclusion is always that you need the agency. We don't implement, we don't sell software, we don't do retainers. We sell one thing: honest, independent advice. If the best answer for your business is “skip AI, fix your process” — that's what your plan will say.",
+    body: "We don't implement, we don't sell software, we don't take commissions from tools we recommend. If the honest answer is “you don't need AI for this” — that's what your plan will say.",
   },
   timeline: {
     h2: "From “no idea” to “crystal clear” in 5 working days",
@@ -186,70 +160,48 @@ const en = {
   },
   pricing: {
     h2: "Pricing",
-    free: {
-      title: "Free Check",
-      price: "€0",
-      body: "Tell us one problem. We tell you where we'd look and how complex it seems. Within one business day.",
-      cta: "Start free →",
-    },
-    quickFix: {
-      title: "Quick Fix",
-      price: "€49",
-      badge: "Start here",
-      body: "One problem. One practical plan.",
-      bullets: [
-        "What's actually causing it",
-        "The simplest solution that works",
-        "Step-by-step setup you can do yourself",
-        "Which tools (and which NOT to buy)",
-        "Reviewed by a named specialist",
-        "Delivered within 2 business days",
-      ],
-      note: "Upgrade to the full plan within 30 days and your €49 is fully credited.",
-      cta: "Get my Quick Fix — €49",
-    },
-    fullPlan: {
-      title: "Full Business Plan",
-      price: "€295",
-      body: "Got more than one problem? We look across your whole business.",
-      bullets: [
-        "Your 3–5 biggest opportunities, prioritised",
-        "What to do first, what can wait, what to skip",
-        "What's DIY and what needs a professional",
-        "Tools, risks and a 90-day order of attack",
-        "Day-1 snapshot + full refund guarantee",
-        "Reviewed by a named specialist",
-      ],
-      cta: "Get the full plan — €295",
-    },
-    note: "All prices excl. VAT. B2B — company name and KVK number required.",
+    title: "Quick Fix",
+    price: "€49 excl. VAT",
+    body: "One problem. One practical plan.",
+    bullets: [
+      "What's actually causing it",
+      "The simplest solution that works",
+      "Step-by-step, do-it-yourself instructions",
+      "What it'll cost and what NOT to buy",
+      "Reviewed by a named specialist",
+      "Delivered within 2 business days",
+      "Not usable? Full refund.",
+    ],
+    cta: "Tell us the problem — €49",
+    note: "B2B — company name and KVK number at checkout.",
   },
   faq: {
     h2: "Frequently asked questions",
     items: [
       { q: "Do I need to understand AI?", a: "No. You explain your business; we do the rest." },
       {
-        q: "What language is the report in?",
+        q: "What if AI isn't the right answer for my problem?",
+        a: "Then your plan says so, and shows the simpler fix instead. That happens more often than you'd think.",
+      },
+      {
+        q: "What if my problem is actually five problems?",
+        a: "We'll tell you honestly. For problems that span the whole business, we offer a broader analysis — we'll propose it if it genuinely fits, never as a default upsell.",
+      },
+      { q: "Who writes the plan?", a: "Generated with AI support, reviewed and approved by a named specialist before delivery." },
+      {
+        q: "What language?",
         a: "Reports, the briefing and all communication are in English. You're welcome to answer briefing questions in Dutch — we read Dutch fine. The report itself is delivered in clear, jargon-free English.",
       },
-      { q: "Is this a sales funnel for consulting?", a: "No. There is nothing else to buy. That's the point." },
-      { q: "What if AI isn't right for my business?", a: "Then the report says so, and shows what to do instead." },
-      { q: "Who writes the report?", a: "Generated with AI support, reviewed and approved by a named specialist before delivery." },
       { q: "How is my data handled?", a: "Confidential, GDPR/AVG-compliant, never used for other clients." },
-      { q: "What size company is this for?", a: "SMEs, roughly 5–100 employees." },
-      { q: "Can I ask questions afterwards?", a: "Yes. If anything in your plan is unclear, send a short follow-up and we'll clarify it in writing." },
       {
-        q: "What's the difference between the Quick Fix and the full plan?",
-        a: "Quick Fix: you bring one specific problem, we send you one practical plan for it. Full plan: we look across your whole business and prioritise the 3–5 opportunities that matter most. Start small — your €49 is credited if you upgrade within 30 days.",
-      },
-      {
-        q: "What about refunds?",
-        a: "Quick Fix: if the plan isn't usable, we refund it. Full plan: our Day-1 Snapshot guarantee — if the Day-1 Snapshot misses the mark, full refund. This is a B2B product.",
+        q: "Refunds?",
+        a: "If your plan isn't practical and usable, we refund your €49. No forms, no fight.",
       },
     ],
   },
   finalCta: {
-    h2: "In 5 working days, you'll know what's worth doing — and what isn't.",
+    h2: "Start with one annoying problem.",
+    sub: "Fifteen minutes from now, it can be our problem instead of yours.",
   },
   footer: {
     line1: "Noordstar is a product of Lumina Fortuna",
@@ -260,8 +212,7 @@ const en = {
     contactLabel: "Contact",
   },
   reserveModal: {
-    quickFixTitle: "Reserve your Quick Fix",
-    fullPlanTitle: "Reserve your Full Business Plan",
+    title: "Reserve your Quick Fix",
     intro:
       "Payment (iDEAL) is being finalized. Leave your details and we'll send you a secure checkout link.",
     nameLabel: "Full name",
@@ -351,53 +302,26 @@ const en = {
 
 const nl: typeof en = {
   meta: {
-    title:
-      "Noordstar — Wat kan AI daadwerkelijk oplossen in uw bedrijf? | Praktisch, onafhankelijk advies voor kleine bedrijven",
+    title: "Noordstar — Eén bedrijfsprobleem. Eén praktische AI-oplossing. €49",
     description:
-      "Vertel ons wat uw bedrijf vertraagt. Ontvang een gratis eerste check, een Quick Fix van €49, of een volledig onafhankelijk plan — praktisch advies, geen AI-hype.",
+      "Beschrijf één ding dat tijd kost in uw bedrijf. Ontvang binnen 2 werkdagen een kort, praktisch plan — beoordeeld door een naamgetekende specialist. €49, volledige terugbetaling als het niet bruikbaar is.",
   },
   nav: {
-    whatYouGet: "Wat u krijgt",
-    method: "Bewijs",
+    product: "Voorbeeld",
     howItWorks: "Hoe het werkt",
     pricing: "Prijzen",
     faq: "FAQ",
-    cta: "Vraag uw plan aan",
   },
   hero: {
     eyebrow: "AI voor gewone bedrijven. Normaal uitgelegd.",
-    primaryCta: "Vertel ons wat tijd kost →",
-    secondaryCta: "Hoe het werkt",
+    h1: "Iedereen heeft het over AI. Wat zou het daadwerkelijk kunnen oplossen in uw bedrijf?",
+    sub: "U heeft geen grote AI-transformatie nodig. Soms bespaart één kleine verandering elke week uren frustrerend werk. Vertel ons wat u in de weg zit — wij vertellen u of het slimmer kan.",
     reassurance:
       "U hoeft AI niet te begrijpen. Dat is onze taak. Geen verkoopgesprekken, geen bureau-pitch.",
     trust:
-      "Beoordeeld door een naamgetekende analist · Geleverd binnen 5 werkdagen · 100% onafhankelijk — wij verkopen geen implementatie",
-    variants: {
-      default: {
-        h1: "Iedereen heeft het over AI. Wat zou het daadwerkelijk kunnen oplossen in uw bedrijf?",
-        sub: "U heeft geen grote AI-transformatie nodig. Soms bespaart één kleine verandering elke week uren frustrerend werk. Vertel ons wat u in de weg zit — wij vertellen u of het slimmer kan.",
-      },
-      staff: {
-        h1: "Personeelstekort? Een deel van dat werk heeft geen mens nodig.",
-        sub: "Routinematige e-mails beantwoorden, offertes opstellen, facturen achterna bellen, planningen maken — wij laten zien welke van deze taken zelfstandig kunnen verlopen, welke niet, en precies waar u moet beginnen. U kiest zelf wie u helpt het te bouwen.",
-      },
-      admin: {
-        h1: "Offertes, facturen, formulieren, follow-ups — hoeveel van uw week is administratie?",
-        sub: "Wij brengen in kaart hoe uw bedrijf daadwerkelijk werkt en laten precies zien welke taken geautomatiseerd kunnen worden — zoals een locatiebezoek omzetten in een schriftelijke offerte, of automatisch betalingsherinneringen versturen — en welke dat eerlijk gezegd niet zouden moeten zijn.",
-      },
-      time: {
-        h1: "Beantwoordt u nog steeds elke klant-e-mail zelf?",
-        sub: "Routinevragen, afspraken inplannen, orderupdates — wij bepalen wat zonder u kan verlopen, wat niet, en de exacte stappen om het over te dragen. Zo krijgt u uw week terug.",
-      },
-      margin: {
-        h1: "Kunt u de prijzen niet verhogen? Stop dan met betalen voor verspilde uren.",
-        sub: "Gegevens overtypen tussen systemen, handmatige planning, facturen die te laat de deur uitgaan — wij sporen de lekken in uw processen op en rangschikken de oplossingen op wat ze u daadwerkelijk opleveren.",
-      },
-      leaks: {
-        h1: "Een offerte die drie dagen te laat wordt verstuurd, is een verloren klant.",
-        sub: "Trage offertes, vergeten follow-ups, late facturen — wij laten zien welke hiervan met eenvoudige automatisering op te lossen zijn, welke juist procesveranderingen nodig hebben, en wat u als eerste moet aanpakken.",
-      },
-    },
+      "Beoordeeld door een naamgetekende specialist · Geleverd binnen 2 werkdagen · 100% onafhankelijk — wij verkopen geen implementatie",
+    primaryCta: "Vertel ons het probleem — €49",
+    secondaryCta: "Bekijk hoe het werkt ↓",
   },
   recognition: {
     h2: "Herkent u iets hiervan?",
@@ -409,9 +333,8 @@ const nl: typeof en = {
       "Iemand kopieert elke dag informatie van e-mails naar Excel.",
       "We verspillen uren aan het achterna zitten van onbetaalde facturen.",
     ],
-    closingText:
-      "Herkenbaar? De meeste hiervan hebben een eenvoudigere oplossing dan u zou denken — en meestal is daar geen “AI-transformatie” voor nodig.",
-    closingLink: "Vertel ons de uwe, gratis →",
+    closing:
+      "Elk van deze is al eerder opgelost — meestal met iets veel eenvoudigers dan een “AI-transformatie.” Daar is een Quick Fix voor bedoeld.",
   },
   freeCheck: {
     h2: "Start gratis: vertel ons over ÉÉN vervelend probleem",
@@ -420,41 +343,53 @@ const nl: typeof en = {
     placeholder:
       "Uw formulier verschijnt hier — koppel TALLY_FORM_URL in components/FreeCheck.tsx.",
   },
+  productDemo: {
+    h2: "Eén probleem. Eén praktische oplossing. €49.",
+    intro:
+      "U beschrijft één ding dat uw tijd kost. Binnen 2 werkdagen ontvangt u een kort, praktisch plan — beoordeeld door een naamgetekende specialist. Hier is een echt voorbeeld:",
+    cardLabel: "Quick Fix-plan · Voorbeeld",
+    problemLabel: "Het probleem",
+    problemText:
+      "“Ik krijg meer dan 100 e-mails per dag. Ik kan het niet bijbenen — ik zeg tegen klanten dat ze me maar moeten WhatsAppen.”",
+    foundLabel: "Wat wij vonden",
+    foundText:
+      "Het is geen e-mailprobleem — het is een sorteerprobleem. Vier verschillende stromen komen in één hoop terecht, en de waardevolle 10% verdrinkt in de routinematige 90%.",
+    fixLabel: "De eenvoudigste oplossing",
+    fixText:
+      "Sorteerregels → vijf standaardantwoorden → AI om te concepteren (niet te versturen). Geen chatbot. Geen nieuwe software.",
+    diyLabel: "Zelf doen",
+    diyText: "3 stappen, ±2 uur, deze week.",
+    difficultyLabel: "Moeilijkheidsgraad",
+    difficultyValue: "Makkelijk",
+    costLabel: "Verwachte kosten",
+    costValue: "€0–25/maand",
+    dontDoLabel: "Niet doen",
+    dontDoText:
+      "Koop geen chatbot. Stap niet over van e-mailprovider. Start geen CRM-project.",
+    closing: "Heeft u zoiets in uw bedrijf?",
+  },
   process: {
-    h2: "Zo werkt het — en dat is echt zo simpel.",
+    h2: "Zo werkt het",
     steps: [
       {
-        title: "U vertelt ons over uw bedrijf",
-        text: "een gestructureerde vragenlijst, ±35 minuten, in gewone taal. Wat u doet, hoe het werk verloopt, wat u frustreert.",
+        title: "Vertel ons het probleem",
+        text: "beschrijf het in uw eigen woorden, plus een paar korte vragen (welke tools u gebruikt, hoe vaak het voorkomt). ±5 minuten.",
       },
       {
-        title: "Wij analyseren het",
-        text: "met een gestructureerde methode en geavanceerde AI-tools. Een naamgetekende menselijke specialist beoordeelt elke aanbeveling voordat deze bij u terechtkomt.",
+        title: "Betaal €49",
+        text: "beveiligde checkout, iDEAL. Excl. BTW, B2B.",
       },
       {
-        title: "U krijgt een helder plan",
-        text: "wat de moeite waard is, wat niet, wat u als eerste moet doen, en precies hoe u het voor elkaar krijgt — zelf of met een leverancier van uw keuze.",
+        title: "Wij onderzoeken",
+        text: "AI helpt ons snel te analyseren; een naamgetekende menselijke specialist beoordeelt alles voordat het bij u terechtkomt.",
+      },
+      {
+        title: "Uw plan komt binnen 2 werkdagen",
+        text: "wat wij vonden, wat wij zouden doen, hoe u het zelf kunt uitvoeren, wat het kost, wat u NIET moet doen, en wanneer u een professional nodig heeft.",
       },
     ],
-  },
-  example: {
-    h2: "Zo ziet dat er in de praktijk uit",
-    turns: [
-      {
-        label: "U vertelt ons",
-        text: "“Ik krijg meer dan 100 e-mails per dag. Ik kan het niet bijbenen — ik ben klanten al gaan vragen om me gewoon te WhatsAppen.”",
-      },
-      {
-        label: "Wij onderzoeken",
-        text: "welke soorten e-mails er daadwerkelijk binnenkomen, welke steeds terugkomen, wat uw e-mailprogramma al kan, en waar AI daadwerkelijk helpt.",
-      },
-      {
-        label: "U ontvangt",
-        text: "“Koop nog niets. Uw inbox heeft sorteerregels nodig, vijf standaardantwoorden, en AI om te concepteren — geen chatbot. Hier is de exacte opzet, wat het kost (waarschijnlijk €0), en wat u NIET moet doen.”",
-      },
-    ],
-    closing:
-      "Dat is een Quick Fix. €49. De meeste problemen zijn eenvoudiger dan de mensen die AI verkopen u willen laten geloven.",
+    guarantee:
+      "Is uw plan niet praktisch en bruikbaar? Dan betalen wij het terug. Zo simpel is het.",
   },
   whatYouGet: {
     h2: "Dit heeft u na 5 dagen in handen",
@@ -492,7 +427,7 @@ const nl: typeof en = {
   },
   independence: {
     h2: "Wij hebben u daarna niets anders te verkopen. Dat is precies het punt.",
-    body: "Genoeg bureaus bieden gratis “AI-scans” aan — en hun conclusie is altijd dat u het bureau nodig heeft. Wij implementeren niet, wij verkopen geen software, wij werken niet op basis van retainers. Wij verkopen één ding: eerlijk, onafhankelijk advies. Als het beste antwoord voor uw bedrijf is “sla AI over, verbeter uw proces” — dan is dat precies wat uw plan zal zeggen.",
+    body: "Wij implementeren niet, wij verkopen geen software, wij nemen geen commissies van tools die wij aanbevelen. Als het eerlijke antwoord is “u heeft hier geen AI voor nodig” — dan is dat precies wat uw plan zal zeggen.",
   },
   timeline: {
     h2: "Van “geen idee” naar “volledig helder” in 5 werkdagen",
@@ -525,70 +460,48 @@ const nl: typeof en = {
   },
   pricing: {
     h2: "Prijzen",
-    free: {
-      title: "Gratis Check",
-      price: "€0",
-      body: "Vertel ons één probleem. Wij vertellen u waar wij zouden kijken en hoe complex het lijkt. Binnen één werkdag.",
-      cta: "Start gratis →",
-    },
-    quickFix: {
-      title: "Quick Fix",
-      price: "€49",
-      badge: "Begin hier",
-      body: "Eén probleem. Eén praktisch plan.",
-      bullets: [
-        "Wat het daadwerkelijk veroorzaakt",
-        "De eenvoudigste oplossing die werkt",
-        "Stapsgewijze opzet die u zelf kunt uitvoeren",
-        "Welke tools (en welke NIET te kopen)",
-        "Beoordeeld door een naamgetekende specialist",
-        "Geleverd binnen 2 werkdagen",
-      ],
-      note: "Upgrade binnen 30 dagen naar het volledige plan en uw €49 wordt volledig verrekend.",
-      cta: "Vraag mijn Quick Fix aan — €49",
-    },
-    fullPlan: {
-      title: "Volledig Bedrijfsplan",
-      price: "€295",
-      body: "Meer dan één probleem? Wij kijken naar uw hele bedrijf.",
-      bullets: [
-        "Uw 3–5 grootste kansen, geprioriteerd",
-        "Wat u eerst moet doen, wat kan wachten, wat u kunt overslaan",
-        "Wat u zelf kunt doen en waar een professional nodig is",
-        "Tools, risico's en een 90-dagen aanvalsvolgorde",
-        "Dag-1 snapshot + volledige refund-garantie",
-        "Beoordeeld door een naamgetekende specialist",
-      ],
-      cta: "Vraag het volledige plan aan — €295",
-    },
-    note: "Alle prijzen excl. BTW. B2B — bedrijfsnaam en KVK-nummer vereist.",
+    title: "Quick Fix",
+    price: "€49 excl. BTW",
+    body: "Eén probleem. Eén praktisch plan.",
+    bullets: [
+      "Wat het daadwerkelijk veroorzaakt",
+      "De eenvoudigste oplossing die werkt",
+      "Stapsgewijze, zelf uit te voeren instructies",
+      "Wat het kost en wat u NIET moet kopen",
+      "Beoordeeld door een naamgetekende specialist",
+      "Geleverd binnen 2 werkdagen",
+      "Niet bruikbaar? Volledige terugbetaling.",
+    ],
+    cta: "Vertel ons het probleem — €49",
+    note: "B2B — bedrijfsnaam en KVK-nummer bij het afrekenen.",
   },
   faq: {
     h2: "Veelgestelde vragen",
     items: [
       { q: "Moet ik AI begrijpen?", a: "Nee. U legt uw bedrijf uit; wij doen de rest." },
       {
-        q: "In welke taal is het rapport?",
+        q: "Wat als AI niet het juiste antwoord is voor mijn probleem?",
+        a: "Dan zegt uw plan dat, en laat het de eenvoudigere oplossing zien. Dat gebeurt vaker dan u zou denken.",
+      },
+      {
+        q: "Wat als mijn probleem eigenlijk vijf problemen zijn?",
+        a: "Dat vertellen wij u eerlijk. Voor problemen die uw hele bedrijf raken, bieden wij een bredere analyse aan — wij stellen dit voor als het echt past, nooit als standaard upsell.",
+      },
+      { q: "Wie schrijft het plan?", a: "Gegenereerd met AI-ondersteuning, beoordeeld en goedgekeurd door een naamgetekende specialist vóór levering." },
+      {
+        q: "Welke taal?",
         a: "Rapporten, de briefing en alle communicatie zijn in het Engels. U mag de briefingvragen gerust in het Nederlands beantwoorden — wij lezen prima Nederlands. Het rapport zelf wordt geleverd in helder Engels, zonder jargon.",
       },
-      { q: "Is dit een verkooptrechter voor consultancy?", a: "Nee. Er is niets anders te koop. Dat is precies het punt." },
-      { q: "Wat als AI niet geschikt is voor mijn bedrijf?", a: "Dan staat dat in het rapport, met een alternatief." },
-      { q: "Wie schrijft het rapport?", a: "Gegenereerd met AI-ondersteuning, beoordeeld en goedgekeurd door een naamgetekende specialist vóór levering." },
       { q: "Hoe worden mijn gegevens behandeld?", a: "Vertrouwelijk, AVG/GDPR-conform, nooit gebruikt voor andere klanten." },
-      { q: "Voor welke bedrijfsgrootte is dit bedoeld?", a: "MKB, ongeveer 5–100 medewerkers." },
-      { q: "Kan ik achteraf vragen stellen?", a: "Ja. Als iets in uw plan onduidelijk is, stuurt u een korte vervolgvraag en wij verduidelijken dit schriftelijk." },
       {
-        q: "Wat is het verschil tussen de Quick Fix en het volledige plan?",
-        a: "Quick Fix: u brengt één specifiek probleem in, wij sturen u één praktisch plan daarvoor. Volledig plan: wij kijken naar uw hele bedrijf en prioriteren de 3–5 belangrijkste kansen. Begin klein — uw €49 wordt verrekend als u binnen 30 dagen upgradet.",
-      },
-      {
-        q: "Hoe zit het met terugbetalingen?",
-        a: "Quick Fix: als het plan niet bruikbaar is, betalen wij het terug. Volledig plan: onze Dag-1 Snapshot-garantie — als de Dag-1 Snapshot niet aan de verwachting voldoet, volledige terugbetaling. Dit is een B2B-product.",
+        q: "Terugbetalingen?",
+        a: "Is uw plan niet praktisch en bruikbaar? Dan betalen wij uw €49 terug. Geen formulieren, geen gedoe.",
       },
     ],
   },
   finalCta: {
-    h2: "Over 5 werkdagen weet u wat de moeite waard is — en wat niet.",
+    h2: "Begin met één vervelend probleem.",
+    sub: "Over vijftien minuten kan het ons probleem zijn in plaats van het uwe.",
   },
   footer: {
     line1: "Noordstar is een product van Lumina Fortuna",
@@ -599,8 +512,7 @@ const nl: typeof en = {
     contactLabel: "Contact",
   },
   reserveModal: {
-    quickFixTitle: "Reserveer uw Quick Fix",
-    fullPlanTitle: "Reserveer uw Volledig Bedrijfsplan",
+    title: "Reserveer uw Quick Fix",
     intro:
       "De betaling (iDEAL) wordt momenteel afgerond. Laat uw gegevens achter en wij sturen u een beveiligde betaallink.",
     nameLabel: "Volledige naam",

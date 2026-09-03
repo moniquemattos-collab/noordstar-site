@@ -21,14 +21,13 @@ const siteUrl = "https://noordstar.nl";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title:
-    "Noordstar — What could AI actually fix in your business? | Practical, independent advice for small businesses",
+  title: "Noordstar — One business problem. One practical AI fix. €49",
   description:
-    "Tell us what's slowing your business down. Get a free first check, a €49 Quick Fix, or a full independent plan — practical advice, no AI hype.",
+    "Describe one thing that's wasting time in your business. Get a short, practical plan within 2 business days — reviewed by a named specialist. €49, full refund if it's not useful.",
   openGraph: {
-    title: "Noordstar — What could AI actually fix in your business?",
+    title: "Noordstar — One business problem. One practical AI fix. €49",
     description:
-      "Practical, independent AI advice for small businesses. Start free, or get a €49 Quick Fix.",
+      "A short, practical plan for one specific problem — reviewed by a named specialist, delivered within 2 business days.",
     url: siteUrl,
     siteName: "Noordstar",
     locale: "en_US",
@@ -37,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Noordstar — What could AI actually fix in your business?",
+    title: "Noordstar — One business problem. One practical AI fix. €49",
     description:
-      "Practical, independent AI advice for small businesses. Start free, or get a €49 Quick Fix.",
+      "A short, practical plan for one specific problem — reviewed by a named specialist, delivered within 2 business days.",
   },
   icons: {
     icon: "/favicon.svg",

@@ -12,7 +12,7 @@ export function Process() {
           {t.process.h2}
         </h2>
 
-        <div className="mt-14 grid gap-10 sm:grid-cols-3">
+        <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {t.process.steps.map((step, i) => (
             <div key={step.title}>
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-soft font-head text-lg font-bold text-accent">
@@ -27,6 +27,10 @@ export function Process() {
             </div>
           ))}
         </div>
+
+        <p className="mt-14 max-w-2xl rounded-xl2 bg-accent-soft px-6 py-5 text-base font-medium leading-relaxed text-ink sm:text-lg">
+          {t.process.guarantee}
+        </p>
       </div>
     </section>
   );

@@ -1,31 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/language-context";
-import { DEFAULT_HERO_VARIANT, type HeroVariantKey } from "@/lib/translations";
+import { useModal } from "@/lib/modal-context";
 import { CompassMark } from "./CompassMark";
-
-const VARIANT_KEYS: HeroVariantKey[] = [
-  "default",
-  "staff",
-  "admin",
-  "time",
-  "margin",
-  "leaks",
-];
 
 export function Hero() {
   const { t } = useLanguage();
-  const [variant, setVariant] = useState<HeroVariantKey>(DEFAULT_HERO_VARIANT);
-
-  useEffect(() => {
-    const param = new URLSearchParams(window.location.search).get("v");
-    if (param && (VARIANT_KEYS as string[]).includes(param)) {
-      setVariant(param as HeroVariantKey);
-    }
-  }, []);
-
-  const { h1, sub } = t.hero.variants[variant];
+  const { openReserve } = useModal();
 
   return (
     <section id="top" className="relative overflow-hidden bg-cream">
@@ -36,11 +17,11 @@ export function Hero() {
         </div>
 
         <h1 className="max-w-3xl font-head text-4xl font-bold leading-[1.15] tracking-tight text-ink sm:text-5xl md:text-6xl">
-          {h1}
+          {t.hero.h1}
         </h1>
 
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink/70 sm:text-lg">
-          {sub}
+          {t.hero.sub}
         </p>
 
         <p className="mt-4 max-w-2xl text-sm font-medium text-accent-dark sm:text-base">
@@ -48,14 +29,15 @@ export function Hero() {
         </p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-          <a
-            href="#free-check"
+          <button
+            type="button"
+            onClick={() => openReserve()}
             className="rounded-full bg-accent px-7 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:text-base"
           >
             {t.hero.primaryCta}
-          </a>
+          </button>
           <a
-            href="#how-it-works"
+            href="#the-product"
             className="rounded-full border border-ink/20 px-7 py-4 text-center text-sm font-semibold text-ink transition-colors hover:border-ink/40 sm:text-base"
           >
             {t.hero.secondaryCta}

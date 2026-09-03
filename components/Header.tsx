@@ -2,16 +2,17 @@
 
 import { useState } from "react";
 import { useLanguage } from "@/lib/language-context";
+import { useModal } from "@/lib/modal-context";
 import { CompassMark } from "./CompassMark";
 
 export function Header() {
   const { t, lang, setLang } = useLanguage();
+  const { openReserve } = useModal();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
-    { href: "#what-you-get", label: t.nav.whatYouGet },
+    { href: "#the-product", label: t.nav.product },
     { href: "#how-it-works", label: t.nav.howItWorks },
-    { href: "#method", label: t.nav.method },
     { href: "#pricing", label: t.nav.pricing },
     { href: "#faq", label: t.nav.faq },
   ];
@@ -62,12 +63,13 @@ export function Header() {
             </button>
           </div>
 
-          <a
-            href="#pricing"
+          <button
+            type="button"
+            onClick={() => openReserve()}
             className="hidden rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:inline-block"
           >
-            {t.nav.cta}
-          </a>
+            {t.hero.primaryCta}
+          </button>
 
           <button
             type="button"
@@ -120,13 +122,16 @@ export function Header() {
                 {t.langToggle.en}
               </button>
             </div>
-            <a
-              href="#pricing"
-              onClick={() => setMenuOpen(false)}
+            <button
+              type="button"
+              onClick={() => {
+                setMenuOpen(false);
+                openReserve();
+              }}
               className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white"
             >
-              {t.nav.cta}
-            </a>
+              {t.hero.primaryCta}
+            </button>
           </div>
         </div>
       )}
