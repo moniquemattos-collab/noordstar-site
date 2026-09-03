@@ -1,8 +1,6 @@
 "use client";
 
 import { useLanguage } from "@/lib/language-context";
-import { useModal } from "@/lib/modal-context";
-import { ReportSlideVisual } from "./ReportSlideVisual";
 import {
   IconBalance,
   IconChecklist,
@@ -23,7 +21,6 @@ const icons = [
 
 export function WhatYouGet() {
   const { t } = useLanguage();
-  const { openSample } = useModal();
 
   return (
     <section id="what-you-get" className="bg-white">
@@ -52,29 +49,6 @@ export function WhatYouGet() {
               </div>
             );
           })}
-        </div>
-
-        <div className="mt-16">
-          <p className="section-label text-ink/45">{t.whatYouGet.insideLabel}</p>
-          <div className="mt-5 flex gap-5 overflow-x-auto pb-2 no-scrollbar">
-            {t.whatYouGet.slides.map((slide, i) => (
-              <button
-                key={slide.title}
-                type="button"
-                onClick={() => openSample(i)}
-                className="group w-[260px] shrink-0 text-left sm:w-[300px]"
-              >
-                <div className="aspect-[4/5] w-full rounded-xl2 border border-line bg-cream shadow-sm transition-shadow group-hover:shadow-md">
-                  <ReportSlideVisual index={i as 0 | 1 | 2} />
-                </div>
-                <p className="mt-3 text-sm font-medium text-ink">
-                  {slide.title}
-                </p>
-                <p className="text-xs text-ink/50">{slide.caption}</p>
-              </button>
-            ))}
-          </div>
-          <p className="mt-4 text-sm text-ink/50">{t.whatYouGet.carouselNote}</p>
         </div>
       </div>
     </section>

@@ -1,12 +1,10 @@
 "use client";
 
 import { useLanguage } from "@/lib/language-context";
-import { useModal } from "@/lib/modal-context";
 import { CompassMark } from "./CompassMark";
 
 export function FinalCTA() {
   const { t } = useLanguage();
-  const { openReserve, openSample } = useModal();
 
   return (
     <section className="bg-ink text-cream">
@@ -16,20 +14,18 @@ export function FinalCTA() {
           {t.finalCta.h2}
         </h2>
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-          <button
-            type="button"
-            onClick={() => openReserve("report")}
-            className="rounded-full bg-accent px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:text-base"
+          <a
+            href="#free-check"
+            className="rounded-full bg-accent px-7 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:text-base"
           >
             {t.hero.primaryCta}
-          </button>
-          <button
-            type="button"
-            onClick={() => openSample()}
-            className="rounded-full border border-cream/30 px-7 py-4 text-sm font-semibold text-cream transition-colors hover:border-cream/60 sm:text-base"
+          </a>
+          <a
+            href="#how-it-works"
+            className="rounded-full border border-cream/30 px-7 py-4 text-center text-sm font-semibold text-cream transition-colors hover:border-cream/60 sm:text-base"
           >
             {t.hero.secondaryCta}
-          </button>
+          </a>
         </div>
       </div>
     </section>

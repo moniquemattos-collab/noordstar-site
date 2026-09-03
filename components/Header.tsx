@@ -2,12 +2,10 @@
 
 import { useState } from "react";
 import { useLanguage } from "@/lib/language-context";
-import { useModal } from "@/lib/modal-context";
 import { CompassMark } from "./CompassMark";
 
 export function Header() {
   const { t, lang, setLang } = useLanguage();
-  const { openReserve } = useModal();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
@@ -64,13 +62,12 @@ export function Header() {
             </button>
           </div>
 
-          <button
-            type="button"
-            onClick={() => openReserve("report")}
+          <a
+            href="#pricing"
             className="hidden rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:inline-block"
           >
             {t.nav.cta}
-          </button>
+          </a>
 
           <button
             type="button"
@@ -123,16 +120,13 @@ export function Header() {
                 {t.langToggle.en}
               </button>
             </div>
-            <button
-              type="button"
-              onClick={() => {
-                setMenuOpen(false);
-                openReserve("report");
-              }}
+            <a
+              href="#pricing"
+              onClick={() => setMenuOpen(false)}
               className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white"
             >
               {t.nav.cta}
-            </button>
+            </a>
           </div>
         </div>
       )}

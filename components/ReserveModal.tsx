@@ -27,15 +27,19 @@ export function ReserveModal() {
 
   if (!reserveOpen) return null;
 
-  const priceLabel = reserveOpen === "plus" ? t.pricing.plus.price : t.pricing.main.price;
-  const tierLabel = reserveOpen === "plus" ? t.pricing.plus.title : t.pricing.main.title;
+  const isQuickFix = reserveOpen === "quickfix";
+  const priceLabel = isQuickFix ? t.pricing.quickFix.price : t.pricing.fullPlan.price;
+  const tierLabel = isQuickFix ? t.pricing.quickFix.title : t.pricing.fullPlan.title;
+  const modalTitle = isQuickFix
+    ? t.reserveModal.quickFixTitle
+    : t.reserveModal.fullPlanTitle;
 
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-ink/60 p-5"
       role="dialog"
       aria-modal="true"
-      aria-label={t.reserveModal.title}
+      aria-label={modalTitle}
       onClick={closeReserve}
     >
       <div
@@ -46,7 +50,7 @@ export function ReserveModal() {
           <div>
             <p className="section-label text-accent">{tierLabel} · {priceLabel}</p>
             <h3 className="mt-2 font-head text-2xl font-bold text-ink">
-              {t.reserveModal.title}
+              {modalTitle}
             </h3>
           </div>
           <button

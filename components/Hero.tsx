@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/language-context";
-import { useModal } from "@/lib/modal-context";
 import { DEFAULT_HERO_VARIANT, type HeroVariantKey } from "@/lib/translations";
 import { CompassMark } from "./CompassMark";
 
@@ -17,7 +16,6 @@ const VARIANT_KEYS: HeroVariantKey[] = [
 
 export function Hero() {
   const { t } = useLanguage();
-  const { openReserve, openSample } = useModal();
   const [variant, setVariant] = useState<HeroVariantKey>(DEFAULT_HERO_VARIANT);
 
   useEffect(() => {
@@ -50,20 +48,18 @@ export function Hero() {
         </p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-          <button
-            type="button"
-            onClick={() => openReserve("report")}
-            className="rounded-full bg-accent px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:text-base"
+          <a
+            href="#free-check"
+            className="rounded-full bg-accent px-7 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:text-base"
           >
             {t.hero.primaryCta}
-          </button>
-          <button
-            type="button"
-            onClick={() => openSample()}
-            className="rounded-full border border-ink/20 px-7 py-4 text-sm font-semibold text-ink transition-colors hover:border-ink/40 sm:text-base"
+          </a>
+          <a
+            href="#how-it-works"
+            className="rounded-full border border-ink/20 px-7 py-4 text-center text-sm font-semibold text-ink transition-colors hover:border-ink/40 sm:text-base"
           >
             {t.hero.secondaryCta}
-          </button>
+          </a>
         </div>
 
         <p className="mt-8 max-w-xl text-xs text-ink/50 sm:text-sm">

@@ -28,7 +28,13 @@ export function Recognition() {
         </div>
 
         <p className="mt-10 max-w-2xl rounded-xl2 bg-accent-soft px-6 py-5 text-base leading-relaxed text-ink sm:text-lg">
-          {t.recognition.closing}
+          {t.recognition.closingText}{" "}
+          <a
+            href="#free-check"
+            className="font-semibold text-accent-dark underline underline-offset-4 hover:text-accent"
+          >
+            {t.recognition.closingLink}
+          </a>
         </p>
       </div>
     </section>

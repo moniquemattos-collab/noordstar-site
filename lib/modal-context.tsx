@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, type ReactNode } from "react";
 
-type ReserveTier = "report" | "plus";
+type ReserveTier = "quickfix" | "full";
 
 type ModalContextValue = {
   reserveOpen: false | ReserveTier;
