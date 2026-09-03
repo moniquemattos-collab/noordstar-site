@@ -32,20 +32,20 @@ export function ReserveModal() {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-navy-dark/80 p-5"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-ink/60 p-5"
       role="dialog"
       aria-modal="true"
       aria-label={t.reserveModal.title}
       onClick={closeReserve}
     >
       <div
-        className="w-full max-w-md rounded-sm bg-white p-8 sm:p-10"
+        className="w-full max-w-md rounded-xl2 border border-line bg-white p-8 shadow-xl sm:p-10"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-start justify-between">
           <div>
-            <p className="section-label text-gold">{tierLabel} · {priceLabel}</p>
-            <h3 className="mt-2 font-serif text-2xl text-navy">
+            <p className="section-label text-accent">{tierLabel} · {priceLabel}</p>
+            <h3 className="mt-2 font-head text-2xl font-bold text-ink">
               {t.reserveModal.title}
             </h3>
           </div>
@@ -53,14 +53,14 @@ export function ReserveModal() {
             type="button"
             onClick={closeReserve}
             aria-label={t.reserveModal.close}
-            className="text-navy/50 hover:text-navy"
+            className="text-ink/40 hover:text-ink"
           >
             ✕
           </button>
         </div>
 
         {submitted ? (
-          <p className="mt-6 text-sm leading-relaxed text-navy/75">
+          <p className="mt-6 text-sm leading-relaxed text-ink/70">
             {t.reserveModal.success}
           </p>
         ) : (
@@ -76,12 +76,12 @@ export function ReserveModal() {
               setSubmitted(true);
             }}
           >
-            <p className="text-sm leading-relaxed text-navy/65">
+            <p className="text-sm leading-relaxed text-ink/60">
               {t.reserveModal.intro}
             </p>
 
             <div>
-              <label className="text-xs font-medium text-navy/60" htmlFor="reserve-name">
+              <label className="text-xs font-medium text-ink/55" htmlFor="reserve-name">
                 {t.reserveModal.nameLabel}
               </label>
               <input
@@ -89,12 +89,12 @@ export function ReserveModal() {
                 name="name"
                 type="text"
                 required
-                className="mt-1 w-full rounded-sm border border-navy/20 bg-white px-3 py-2.5 text-sm text-navy focus:border-gold focus:outline-none"
+                className="mt-1 w-full rounded-lg border border-line bg-white px-3 py-2.5 text-sm text-ink focus:border-accent focus:outline-none"
               />
             </div>
 
             <div>
-              <label className="text-xs font-medium text-navy/60" htmlFor="reserve-company">
+              <label className="text-xs font-medium text-ink/55" htmlFor="reserve-company">
                 {t.reserveModal.companyLabel}
               </label>
               <input
@@ -102,12 +102,12 @@ export function ReserveModal() {
                 name="company"
                 type="text"
                 required
-                className="mt-1 w-full rounded-sm border border-navy/20 bg-white px-3 py-2.5 text-sm text-navy focus:border-gold focus:outline-none"
+                className="mt-1 w-full rounded-lg border border-line bg-white px-3 py-2.5 text-sm text-ink focus:border-accent focus:outline-none"
               />
             </div>
 
             <div>
-              <label className="text-xs font-medium text-navy/60" htmlFor="reserve-email">
+              <label className="text-xs font-medium text-ink/55" htmlFor="reserve-email">
                 {t.reserveModal.emailLabel}
               </label>
               <input
@@ -115,7 +115,7 @@ export function ReserveModal() {
                 name="email"
                 type="email"
                 required
-                className="mt-1 w-full rounded-sm border border-navy/20 bg-white px-3 py-2.5 text-sm text-navy focus:border-gold focus:outline-none"
+                className="mt-1 w-full rounded-lg border border-line bg-white px-3 py-2.5 text-sm text-ink focus:border-accent focus:outline-none"
               />
             </div>
 
@@ -133,7 +133,7 @@ export function ReserveModal() {
 
             <button
               type="submit"
-              className="mt-2 w-full rounded-sm bg-navy px-6 py-3.5 text-sm font-semibold text-ivory transition-colors hover:bg-navy-light"
+              className="mt-2 w-full rounded-full bg-accent px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent-dark"
             >
               {t.reserveModal.submit}
             </button>

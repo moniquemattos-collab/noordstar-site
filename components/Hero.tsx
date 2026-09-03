@@ -4,15 +4,15 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/language-context";
 import { useModal } from "@/lib/modal-context";
 import { DEFAULT_HERO_VARIANT, type HeroVariantKey } from "@/lib/translations";
-import { NorthStar } from "./NorthStar";
+import { CompassMark } from "./CompassMark";
 
 const VARIANT_KEYS: HeroVariantKey[] = [
+  "default",
   "staff",
   "admin",
   "time",
   "margin",
   "leaks",
-  "ai",
 ];
 
 export function Hero() {
@@ -30,42 +30,43 @@ export function Hero() {
   const { h1, sub } = t.hero.variants[variant];
 
   return (
-    <section
-      id="top"
-      className="starfield relative overflow-hidden bg-navy text-ivory"
-    >
+    <section id="top" className="relative overflow-hidden bg-cream">
       <div className="mx-auto flex max-w-content flex-col items-start px-5 py-20 sm:px-8 sm:py-28">
-        <div className="mb-6 flex items-center gap-2 text-gold">
-          <NorthStar className="h-4 w-4" />
-          <span className="section-label">Noordstar</span>
+        <div className="mb-6 flex items-center gap-2 text-accent">
+          <CompassMark className="h-4 w-4" />
+          <span className="section-label">{t.hero.eyebrow}</span>
         </div>
 
-        <h1 className="max-w-3xl font-serif text-4xl leading-[1.15] tracking-tight sm:text-5xl md:text-6xl">
+        <h1 className="max-w-3xl font-head text-4xl font-bold leading-[1.15] tracking-tight text-ink sm:text-5xl md:text-6xl">
           {h1}
         </h1>
 
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-ivory/80 sm:text-lg">
+        <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink/70 sm:text-lg">
           {sub}
+        </p>
+
+        <p className="mt-4 max-w-2xl text-sm font-medium text-accent-dark sm:text-base">
+          {t.hero.reassurance}
         </p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <button
             type="button"
             onClick={() => openReserve("report")}
-            className="rounded-sm bg-gold px-7 py-4 text-sm font-semibold text-navy transition-colors hover:bg-gold-light sm:text-base"
+            className="rounded-full bg-accent px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:text-base"
           >
             {t.hero.primaryCta}
           </button>
           <button
             type="button"
             onClick={() => openSample()}
-            className="rounded-sm border border-ivory/30 px-7 py-4 text-sm font-semibold text-ivory transition-colors hover:border-ivory/60 sm:text-base"
+            className="rounded-full border border-ink/20 px-7 py-4 text-sm font-semibold text-ink transition-colors hover:border-ink/40 sm:text-base"
           >
             {t.hero.secondaryCta}
           </button>
         </div>
 
-        <p className="mt-8 max-w-xl text-xs text-ivory/60 sm:text-sm">
+        <p className="mt-8 max-w-xl text-xs text-ink/50 sm:text-sm">
           {t.hero.trust}
         </p>
       </div>

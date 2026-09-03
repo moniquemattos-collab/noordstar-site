@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/lib/language-context";
 import { useModal } from "@/lib/modal-context";
-import { NorthStar } from "./NorthStar";
+import { CompassMark } from "./CompassMark";
 
 export function Header() {
   const { t, lang, setLang } = useLanguage();
@@ -12,18 +12,18 @@ export function Header() {
 
   const links = [
     { href: "#what-you-get", label: t.nav.whatYouGet },
-    { href: "#method", label: t.nav.method },
     { href: "#how-it-works", label: t.nav.howItWorks },
+    { href: "#method", label: t.nav.method },
     { href: "#pricing", label: t.nav.pricing },
     { href: "#faq", label: t.nav.faq },
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-navy/10 bg-ivory/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-line bg-cream/95 backdrop-blur">
       <div className="mx-auto flex max-w-content items-center justify-between px-5 py-4 sm:px-8">
         <a href="#top" className="flex items-center gap-2">
-          <NorthStar className="h-5 w-5 text-gold" />
-          <span className="font-serif text-lg tracking-wide text-navy">
+          <CompassMark className="h-5 w-5 text-accent" />
+          <span className="font-head text-lg font-bold tracking-tight text-ink">
             Noordstar
           </span>
         </a>
@@ -33,7 +33,7 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-navy/80 transition-colors hover:text-navy"
+              className="text-sm font-medium text-ink/70 transition-colors hover:text-ink"
             >
               {link.label}
             </a>
@@ -41,12 +41,12 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="hidden items-center rounded-full border border-navy/15 p-0.5 text-xs font-semibold sm:flex">
+          <div className="hidden items-center rounded-full border border-line p-0.5 text-xs font-semibold sm:flex">
             <button
               type="button"
               onClick={() => setLang("nl")}
               className={`rounded-full px-2.5 py-1 transition-colors ${
-                lang === "nl" ? "bg-navy text-ivory" : "text-navy/60"
+                lang === "nl" ? "bg-ink text-cream" : "text-ink/50"
               }`}
               aria-pressed={lang === "nl"}
             >
@@ -56,7 +56,7 @@ export function Header() {
               type="button"
               onClick={() => setLang("en")}
               className={`rounded-full px-2.5 py-1 transition-colors ${
-                lang === "en" ? "bg-navy text-ivory" : "text-navy/60"
+                lang === "en" ? "bg-ink text-cream" : "text-ink/50"
               }`}
               aria-pressed={lang === "en"}
             >
@@ -67,48 +67,48 @@ export function Header() {
           <button
             type="button"
             onClick={() => openReserve("report")}
-            className="hidden rounded-sm bg-navy px-4 py-2 text-sm font-semibold text-ivory transition-colors hover:bg-navy-light sm:inline-block"
+            className="hidden rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:inline-block"
           >
             {t.nav.cta}
           </button>
 
           <button
             type="button"
-            className="flex h-9 w-9 items-center justify-center rounded-sm border border-navy/15 lg:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-line lg:hidden"
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Menu"
             aria-expanded={menuOpen}
           >
             <span className="relative block h-3 w-4">
-              <span className="absolute left-0 top-0 h-px w-4 bg-navy" />
-              <span className="absolute left-0 top-1.5 h-px w-4 bg-navy" />
-              <span className="absolute left-0 top-3 h-px w-4 bg-navy" />
+              <span className="absolute left-0 top-0 h-px w-4 bg-ink" />
+              <span className="absolute left-0 top-1.5 h-px w-4 bg-ink" />
+              <span className="absolute left-0 top-3 h-px w-4 bg-ink" />
             </span>
           </button>
         </div>
       </div>
 
       {menuOpen && (
-        <div className="border-t border-navy/10 bg-ivory px-5 py-4 lg:hidden">
+        <div className="border-t border-line bg-cream px-5 py-4 lg:hidden">
           <nav className="flex flex-col gap-4">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-sm font-medium text-navy/80"
+                className="text-sm font-medium text-ink/70"
               >
                 {link.label}
               </a>
             ))}
           </nav>
           <div className="mt-4 flex items-center justify-between">
-            <div className="flex items-center rounded-full border border-navy/15 p-0.5 text-xs font-semibold">
+            <div className="flex items-center rounded-full border border-line p-0.5 text-xs font-semibold">
               <button
                 type="button"
                 onClick={() => setLang("nl")}
                 className={`rounded-full px-2.5 py-1 ${
-                  lang === "nl" ? "bg-navy text-ivory" : "text-navy/60"
+                  lang === "nl" ? "bg-ink text-cream" : "text-ink/50"
                 }`}
               >
                 {t.langToggle.nl}
@@ -117,7 +117,7 @@ export function Header() {
                 type="button"
                 onClick={() => setLang("en")}
                 className={`rounded-full px-2.5 py-1 ${
-                  lang === "en" ? "bg-navy text-ivory" : "text-navy/60"
+                  lang === "en" ? "bg-ink text-cream" : "text-ink/50"
                 }`}
               >
                 {t.langToggle.en}
@@ -129,7 +129,7 @@ export function Header() {
                 setMenuOpen(false);
                 openReserve("report");
               }}
-              className="rounded-sm bg-navy px-4 py-2 text-sm font-semibold text-ivory"
+              className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white"
             >
               {t.nav.cta}
             </button>

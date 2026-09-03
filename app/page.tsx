@@ -1,12 +1,13 @@
 import { ModalProvider } from "@/lib/modal-context";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Problem } from "@/components/Problem";
+import { Recognition } from "@/components/Recognition";
+import { Process } from "@/components/Process";
+import { Example } from "@/components/Example";
 import { WhatYouGet } from "@/components/WhatYouGet";
-import { Method } from "@/components/Method";
-import { Comparison } from "@/components/Comparison";
 import { Independence } from "@/components/Independence";
-import { HowItWorks } from "@/components/HowItWorks";
+import { Timeline } from "@/components/Timeline";
+import { Proof } from "@/components/Proof";
 import { Pricing } from "@/components/Pricing";
 import { FAQ } from "@/components/FAQ";
 import { FinalCTA } from "@/components/FinalCTA";
@@ -20,12 +21,13 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Problem />
+        <Recognition />
+        <Process />
+        <Example />
         <WhatYouGet />
-        <Method />
-        <Comparison />
         <Independence />
-        <HowItWorks />
+        <Timeline />
+        <Proof />
         <Pricing />
         <FAQ />
         <FinalCTA />

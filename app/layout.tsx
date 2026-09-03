@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { LanguageProvider } from "@/lib/language-context";
 import "./globals.css";
 
-const serif = Fraunces({
+const headFont = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-serif",
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-head",
   display: "swap",
 });
 
@@ -21,13 +21,14 @@ const siteUrl = "https://noordstar.nl";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Noordstar — AI Opportunity Report | Win back hours from your team",
+  title:
+    "Noordstar — Find out what AI can actually do for your business | Independent, plain-language advice for SMEs",
   description:
-    "Independent analysis for SMEs: find out which tasks can run on their own, which can't, and where to start — delivered in 5 working days.",
+    "Tell us how your business works. We'll show you, in plain language, where AI could save you time or money, where it isn't worth the trouble, and what to do first — delivered in 5 working days.",
   openGraph: {
-    title: "Noordstar — AI Opportunity Report | Win back hours from your team",
+    title: "Noordstar — Find out what AI can actually do for your business",
     description:
-      "Independent analysis for SMEs: find out which tasks can run on their own, which can't, and where to start.",
+      "Independent, plain-language AI advice for SMEs: where it helps, where it doesn't, and what to do first.",
     url: siteUrl,
     siteName: "Noordstar",
     locale: "en_US",
@@ -36,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Noordstar — AI Opportunity Report | Win back hours from your team",
+    title: "Noordstar — Find out what AI can actually do for your business",
     description:
-      "Independent analysis for SMEs: find out which tasks can run on their own, which can't, and where to start.",
+      "Independent, plain-language AI advice for SMEs: where it helps, where it doesn't, and what to do first.",
   },
   icons: {
     icon: "/favicon.svg",
@@ -51,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${serif.variable} ${sans.variable}`}>
+    <html lang="en" className={`${headFont.variable} ${sans.variable}`}>
       <body className="font-sans antialiased">
         {/*
           Analytics placeholder.

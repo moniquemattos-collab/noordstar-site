@@ -9,27 +9,34 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: {
-          DEFAULT: "#0A1830",
-          light: "#132745",
-          dark: "#060F1F",
+        cream: {
+          DEFAULT: "#FBF7F0",
+          deep: "#F3EEE1",
         },
-        gold: {
-          DEFAULT: "#B8923B",
-          light: "#D4B26A",
-          dark: "#8F6E29",
+        ink: {
+          DEFAULT: "#171D1B",
+          soft: "#454F4C",
         },
-        ivory: "#FAF8F4",
+        accent: {
+          DEFAULT: "#0E6E68",
+          dark: "#0A5450",
+          light: "#3D8C86",
+          soft: "#E6F2F0",
+        },
+        line: "#E6E0D2",
       },
       fontFamily: {
-        serif: ["var(--font-serif)", "Georgia", "serif"],
+        head: ["var(--font-head)", "Helvetica", "Arial", "sans-serif"],
         sans: ["var(--font-sans)", "Helvetica", "Arial", "sans-serif"],
       },
       maxWidth: {
         content: "1180px",
       },
       letterSpacing: {
-        widest2: "0.18em",
+        widest2: "0.16em",
+      },
+      borderRadius: {
+        xl2: "1.25rem",
       },
     },
   },

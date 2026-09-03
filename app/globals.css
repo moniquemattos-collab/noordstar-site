@@ -7,55 +7,17 @@ html {
 }
 
 body {
-  background-color: #faf8f4;
-  color: #0a1830;
+  background-color: #fbf7f0;
+  color: #171d1b;
 }
 
 ::selection {
-  background-color: #b8923b;
-  color: #ffffff;
-}
-
-/* Subtle four-point north-star mark, used as a section accent */
-.star-mark {
-  position: relative;
-  display: inline-block;
-  width: 0.9em;
-  height: 0.9em;
-}
-.star-mark::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: currentColor;
-  clip-path: polygon(
-    50% 0%,
-    61% 39%,
-    100% 50%,
-    61% 61%,
-    50% 100%,
-    39% 61%,
-    0% 50%,
-    39% 39%
-  );
-}
-
-/* Faint starfield texture used on dark sections */
-.starfield {
-  background-image: radial-gradient(
-      1px 1px at 10% 20%,
-      rgba(184, 146, 59, 0.35) 0,
-      transparent 60%
-    ),
-    radial-gradient(1px 1px at 80% 30%, rgba(184, 146, 59, 0.3) 0, transparent 60%),
-    radial-gradient(1px 1px at 45% 70%, rgba(184, 146, 59, 0.28) 0, transparent 60%),
-    radial-gradient(1px 1px at 65% 85%, rgba(184, 146, 59, 0.25) 0, transparent 60%),
-    radial-gradient(1px 1px at 25% 55%, rgba(184, 146, 59, 0.22) 0, transparent 60%),
-    radial-gradient(1px 1px at 92% 65%, rgba(184, 146, 59, 0.2) 0, transparent 60%);
+  background-color: #0e6e68;
+  color: #fbf7f0;
 }
 
 .section-label {
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   font-size: 0.75rem;
   font-weight: 600;
@@ -67,4 +29,46 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Guiding-line motif: a thin vertical path with a waypoint dot, used to
+   connect sections down the page — the "direction" visual language. */
+.guide-line {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.guide-line::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #d8ccae 20%,
+    #d8ccae 80%,
+    transparent
+  );
+}
+.guide-line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: #0e6e68;
+  transform: translate(-50%, -50%);
+}
+
+.checkbox-mark {
+  clip-path: polygon(
+    9% 45%,
+    23% 32%,
+    41% 55%,
+    76% 15%,
+    91% 28%,
+    42% 82%
+  );
 }

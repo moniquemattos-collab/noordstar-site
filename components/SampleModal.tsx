@@ -30,7 +30,7 @@ export function SampleModal() {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-navy-dark/80 p-5"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-ink/70 p-5"
       role="dialog"
       aria-modal="true"
       aria-label={t.sampleModal.title}
@@ -40,31 +40,31 @@ export function SampleModal() {
         className="relative w-full max-w-md"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="mb-4 flex items-center justify-between text-ivory">
-          <p className="section-label text-gold">{t.sampleModal.title}</p>
+        <div className="mb-4 flex items-center justify-between text-white">
+          <p className="section-label text-accent-light">{t.sampleModal.title}</p>
           <button
             type="button"
             onClick={closeSample}
-            className="text-sm text-ivory/70 hover:text-ivory"
+            className="text-sm text-white/70 hover:text-white"
           >
             {t.sampleModal.close} ✕
           </button>
         </div>
 
-        <div className="aspect-[4/5] w-full rounded-sm bg-ivory shadow-xl">
+        <div className="aspect-[4/5] w-full rounded-xl2 bg-cream shadow-xl">
           <ReportSlideVisual index={sampleIndex as 0 | 1 | 2} />
         </div>
 
-        <div className="mt-4 flex items-center justify-between text-ivory">
+        <div className="mt-4 flex items-center justify-between text-white">
           <div>
             <p className="text-sm font-medium">{slide.title}</p>
-            <p className="text-xs text-ivory/60">{slide.caption}</p>
+            <p className="text-xs text-white/60">{slide.caption}</p>
           </div>
           <div className="flex gap-2">
             <button
               type="button"
               onClick={() => openSample((sampleIndex + 2) % 3)}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-ivory/25 hover:border-ivory/50"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 hover:border-white/50"
               aria-label="Previous"
             >
               ‹
@@ -72,7 +72,7 @@ export function SampleModal() {
             <button
               type="button"
               onClick={() => openSample((sampleIndex + 1) % 3)}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-ivory/25 hover:border-ivory/50"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 hover:border-white/50"
               aria-label="Next"
             >
               ›

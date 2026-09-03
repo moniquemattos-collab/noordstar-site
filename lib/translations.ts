@@ -1,147 +1,181 @@
 export type Language = "en" | "nl";
 
 export type HeroVariantKey =
+  | "default"
   | "staff"
   | "admin"
   | "time"
   | "margin"
-  | "leaks"
-  | "ai";
+  | "leaks";
 
-export const DEFAULT_HERO_VARIANT: HeroVariantKey = "staff";
+export const DEFAULT_HERO_VARIANT: HeroVariantKey = "default";
 
 const en = {
   meta: {
-    title: "Noordstar — AI Opportunity Report | Win back hours from your team",
+    title:
+      "Noordstar — Find out what AI can actually do for your business | Independent, plain-language advice for SMEs",
     description:
-      "Independent analysis for SMEs: find out which tasks can run on their own, which can't, and where to start — delivered in 5 working days.",
+      "Tell us how your business works. We'll show you, in plain language, where AI could save you time or money, where it isn't worth the trouble, and what to do first — delivered in 5 working days.",
   },
   nav: {
     whatYouGet: "What you get",
-    method: "Method",
+    method: "Proof",
     howItWorks: "How it works",
     pricing: "Pricing",
     faq: "FAQ",
-    cta: "Get your report",
+    cta: "Get your plan",
   },
   hero: {
-    primaryCta: "Get your AI Opportunity Report — €295",
-    secondaryCta: "See a sample report",
+    eyebrow: "For business owners who keep hearing about AI",
+    primaryCta: "Find out what AI can do for you — €295",
+    secondaryCta: "See a sample plan",
+    reassurance:
+      "You don't need to know anything about AI. No sales calls. No agency pitch.",
     trust:
       "Reviewed by a named analyst · Delivered in 5 working days · 100% independent — we don't sell implementation",
     variants: {
+      default: {
+        h1: "Not sure what AI could actually do for your business?",
+        sub: "That's exactly what we figure out. Tell us how your company works — we'll tell you, in plain language, where AI could save you time or money, where it isn't worth the trouble, and what to do first.",
+      },
       staff: {
         h1: "Short on staff? Some of that work doesn't need a person.",
-        sub: "Answering routine emails, drafting quotes, chasing invoices, planning jobs — we analyze your business and show which of these can run on their own, which can't, and where to start. You implement with anyone you choose.",
+        sub: "Answering routine emails, drafting quotes, chasing invoices, planning jobs — we'll show you which of these could run on their own, which shouldn't, and exactly where to start. You decide who helps you build it.",
       },
       admin: {
         h1: "Quotes, invoices, forms, follow-ups — how much of your week is admin?",
-        sub: "We map your processes and show exactly which tasks can be automated — like turning a site visit into a written quote, or sending payment reminders automatically — and which honestly shouldn't be.",
+        sub: "We'll map how your business actually works and show you exactly which tasks could be automated — like turning a site visit into a written quote, or sending payment reminders automatically — and which honestly shouldn't be.",
       },
       time: {
         h1: "Still answering every customer email yourself?",
-        sub: "Routine questions, appointment scheduling, order updates — we identify what can run without you, what shouldn't, and the exact steps to hand it over. So you get your week back.",
+        sub: "Routine questions, appointment scheduling, order updates — we'll work out what could run without you, what shouldn't, and the exact steps to hand it over. So you get your week back.",
       },
       margin: {
-        h1: "Can't raise prices? Then stop paying for wasted hours.",
-        sub: "Re-typing data between systems, manual planning, invoices that go out late — we find the leaks in your processes and rank the fixes by what they'll actually save you.",
+        h1: "Can't raise your prices? Then stop paying for wasted hours.",
+        sub: "Re-typing data between systems, manual planning, invoices that go out late — we'll find where your processes leak time and money, and rank the fixes by what they'll actually save you.",
       },
       leaks: {
-        h1: "A quote sent 3 days late is a customer lost.",
-        sub: "Slow quotes, forgotten follow-ups, late invoices — we show which of these can be fixed with simple automation, which need process changes instead, and what to do first.",
-      },
-      ai: {
-        h1: "Know exactly where AI will pay off in your business — and where it won't.",
-        sub: "A professional analysis for SMEs. You explain how your company works. We deliver a prioritized report showing where you lose time and money, which AI opportunities are worth pursuing — and a step-by-step blueprint to act. No sales calls. No implementation agenda.",
+        h1: "A quote sent three days late is a customer lost.",
+        sub: "Slow quotes, forgotten follow-ups, late invoices — we'll show you which of these a simple automation could fix, which need a process change instead, and what to tackle first.",
       },
     },
   },
-  familiar: {
-    h2: "Sound familiar?",
-    intro: "Most SME owners we talk to recognize at least three of these:",
-    cards: [
-      "Your best people spend an hour a day on admin instead of on customers.",
-      "Quotes take days to go out. Customers stop waiting.",
-      "The same customer questions, answered again and again — by you.",
-      "Invoices go out late, reminders get forgotten. The money exists; it just arrives late.",
-      "You want to grow, but you can't get out of the day-to-day.",
+  recognition: {
+    h2: "Does any of this sound familiar?",
+    items: [
+      "You spend hours on things that feel repetitive.",
+      "Your team copies information from one system into another.",
+      "Quotes, emails or documents take longer than they should.",
+      "Customers ask the same questions, again and again.",
+      "You've tried ChatGPT — but you're not sure what else AI could actually do.",
+      "Everyone seems to be “doing AI,” and you wonder if you're falling behind.",
     ],
     closing:
-      "You can't find staff. But you can win back hours from the team you already have. Some of this work can run on its own — some of it can't, and forcing it would be a mistake. Knowing the difference is exactly what the AI Opportunity Report gives you: what to change, what to leave alone, and what to do first. This report prevents a €20,000 mistake with a €295 decision.",
+      "If you nodded at three or more of these: there's almost certainly something here worth finding. That's our job.",
+  },
+  process: {
+    h2: "Here's how it works — it's genuinely this simple.",
+    steps: [
+      {
+        title: "You tell us about your business",
+        text: "a structured questionnaire, ±35 minutes, in plain language. What you do, how work gets done, what frustrates you.",
+      },
+      {
+        title: "We analyse it",
+        text: "using a structured method and advanced AI tools. A named human specialist reviews every recommendation before it reaches you.",
+      },
+      {
+        title: "You get a clear plan",
+        text: "what's worth doing, what isn't, what to do first, and exactly how to get it done — yourself or with any provider you choose.",
+      },
+    ],
+  },
+  example: {
+    h2: "What that looks like in practice",
+    turns: [
+      {
+        label: "You tell us",
+        text: "“Two people in my office spend hours every week preparing quotations.”",
+      },
+      {
+        label: "We investigate",
+        text: "what information they use, what repeats every time, what needs human judgment — and what could safely run on its own.",
+      },
+      {
+        label: "You receive",
+        text: "“This part can be automated. This part shouldn't be. Here's the recommended setup, how difficult it is, which tools to look at — and what to ask the company that installs it.”",
+      },
+    ],
+    closing: "That level of clarity — for every big time-drain in your business.",
   },
   whatYouGet: {
-    h2: "One report. Every decision you need.",
+    h2: "What you'll have in your hands after 5 days",
     cards: [
       {
-        title: "Executive Dashboard",
-        line: "your opportunity score and top priority, on page one",
+        title: "Your results at a glance",
+        line: "everything important on one page",
       },
       {
-        title: "Impact × Effort Matrix",
-        line: "do this first, do this later, never do this",
+        title: "What to do first",
+        line: "and what to skip entirely",
       },
       {
-        title: "Where AI helps — and where it doesn't",
-        line: "including non-AI fixes when they're the honest answer",
+        title: "Where AI helps",
+        line: "and where it honestly doesn't",
       },
       {
-        title: "90-Day Roadmap",
-        line: "sequenced, starting with quick wins",
+        title: "Your first 90 days",
+        line: "in the right order, quick wins first",
       },
       {
-        title: "Implementation Pack",
-        line: "checklists, vendor requirements, and the questions to ask any supplier",
+        title: "Your step-by-step plan",
+        line: "clear enough to hand to any provider",
       },
       {
-        title: "Your Next 3 Decisions",
-        line: "the last page tells you exactly what to do",
+        title: "The questions to ask",
+        line: "so no vendor can oversell you",
       },
     ],
     insideLabel: "Inside the report",
+    carouselNote: "See exactly what your plan includes before you order.",
     slides: [
       { title: "Executive Dashboard", caption: "Opportunity score & top priority" },
       { title: "Impact × Effort Matrix", caption: "What to do first — and never" },
       { title: "90-Day Roadmap", caption: "Sequenced, starting with quick wins" },
     ],
   },
-  method: {
-    h2: "The Noordstar Method™",
-    steps: [
-      { title: "Understand", line: "we map how your business actually works, from your briefing" },
-      { title: "Diagnose", line: "we identify where time and money leak" },
-      { title: "Prioritize", line: "every opportunity ranked by impact × effort" },
-      { title: "Design", line: "roadmap and blueprint for what's worth doing" },
-      { title: "Decide", line: "clear decisions — including what NOT to do" },
-    ],
-    closing:
-      "Every report follows the same auditable process. That's the difference between a methodology and an opinion.",
+  independence: {
+    h2: "We have nothing else to sell you. That's the point.",
+    body: "Plenty of agencies offer free “AI scans” — and their conclusion is always that you need the agency. We don't implement, we don't sell software, we don't do retainers. We sell one thing: honest, independent advice. If the best answer for your business is “skip AI, fix your process” — that's what your plan will say.",
   },
-  buying: {
-    h2: "This is not a chatbot answer.",
-    intro: "Anyone can ask an AI generic questions. What you're buying here is different:",
+  timeline: {
+    h2: "From “no idea” to “crystal clear” in 5 working days",
+    steps: [
+      { title: "Order", line: "pay securely with iDEAL. Company name + KVK number, done." },
+      { title: "Tell us about your business", line: "±35 min questionnaire, save anytime." },
+      {
+        title: "Day 1",
+        line: "you get a first snapshot: how we understand your business + the biggest opportunity we see. (Not what you expected? Full refund, no questions.)",
+      },
+      { title: "Day 3–5", line: "your full plan arrives, reviewed and signed by your analyst." },
+      { title: "It's yours", line: "do it yourself, or hand it to any provider. No strings." },
+    ],
+  },
+  proof: {
+    h2: "Why you can trust the answer",
+    intro:
+      "Every plan follows the same method — the Noordstar Method™: Understand → Diagnose → Prioritize → Design → Decide. The same structured, consistent process for every business. AI helps us work fast; a named specialist decides what reaches you.",
+    steps: ["Understand", "Diagnose", "Prioritize", "Design", "Decide"],
+    tableTitle: "Why this isn't just a ChatGPT answer",
     tableHead: { generic: "Generic AI chat", noordstar: "Noordstar" },
     rows: [
-      { generic: "Generic answers", noordstar: "Analysis of your business, based on your briefing" },
-      { generic: "No context", noordstar: "Structured intake covering operations, systems, people and goals" },
-      { generic: "No priorities", noordstar: "Ranked by impact × effort, with a “never do this” list" },
-      { generic: "No plan", noordstar: "Roadmap, blueprint and implementation pack" },
-      { generic: "No accountability", noordstar: "Standardized method, human expert review, named analyst on every report" },
+      { generic: "Generic answers", noordstar: "Analysis based on how your business actually works" },
+      { generic: "No context", noordstar: "A structured intake — your operations, systems, people and goals" },
+      { generic: "No priorities", noordstar: "Ranked by what's worth doing — with a clear “skip this” list" },
+      { generic: "No plan", noordstar: "A step-by-step roadmap and implementation pack" },
+      { generic: "No accountability", noordstar: "One consistent method, reviewed by a named human specialist" },
     ],
     closing: "AI helps us work fast. A specialist decides what reaches you.",
-  },
-  independence: {
-    h2: "We have nothing to sell you afterwards.",
-    body: "We don't implement, we don't sell software, we don't take retainers. Our only product is honest advice. If the best answer for your business is “fix your process, skip the AI” — that's exactly what your report will say.",
-  },
-  howItWorks: {
-    h2: "From order to clarity in 5 working days.",
-    steps: [
-      { title: "Order", line: "secure checkout (iDEAL), business details required" },
-      { title: "Briefing", line: "structured questionnaire, ±35 minutes, save anytime" },
-      { title: "Day 1", line: "Business Snapshot: our first read of your business and top opportunity" },
-      { title: "Day 3–5", line: "Full report, reviewed and signed by your analyst" },
-      { title: "Yours forever", line: "implement yourself or with any vendor you choose" },
-    ],
   },
   pricing: {
     h2: "Pricing",
@@ -149,25 +183,24 @@ const en = {
       title: "AI Opportunity Report",
       price: "€295",
       bullets: [
-        "Full diagnostic report",
-        "Executive dashboard & scores",
-        "Impact × Effort matrix",
-        "90-day roadmap",
-        "Implementation Pack",
-        "Day-1 Business Snapshot",
-        "Named analyst review",
+        "Your results at a glance",
+        "What to do first — and what to skip",
+        "Where AI helps (and where it doesn't)",
+        "Your first 90 days",
+        "Your step-by-step plan",
+        "The questions to ask any vendor",
       ],
       badge: "iDEAL payment",
       guarantee:
         "Read your Day-1 Snapshot. If it misses the mark: full refund, no questions asked.",
-      cta: "Get your AI Opportunity Report — €295",
+      cta: "Find out what AI can do for you — €295",
     },
     plus: {
-      title: "Report Plus",
+      title: "Plan Plus",
       price: "€495",
       description:
-        "everything in the Report, plus one written Q&A round and a vendor shortlist comparison.",
-      cta: "Get Report Plus — €495",
+        "everything in the plan, plus one written Q&A round and a vendor shortlist comparison.",
+      cta: "Get Plan Plus — €495",
     },
     note: "B2B product — company name and KVK number required at checkout.",
   },
@@ -184,14 +217,12 @@ const en = {
       { q: "Who writes the report?", a: "Generated with AI support, reviewed and approved by a named specialist before delivery." },
       { q: "How is my data handled?", a: "Confidential, GDPR/AVG-compliant, never used for other clients." },
       { q: "What size company is this for?", a: "SMEs, roughly 5–100 employees." },
-      { q: "Can I ask questions afterwards?", a: "One written Q&A round is included in Report Plus." },
+      { q: "Can I ask questions afterwards?", a: "One written Q&A round is included in Plan Plus." },
       { q: "What about refunds?", a: "Our Snapshot guarantee: if the Day-1 Snapshot misses the mark, full refund. This is a B2B product." },
     ],
   },
   finalCta: {
-    h2: "In 5 days, you'll know exactly what to do.",
-    primaryCta: "Get your AI Opportunity Report — €295",
-    secondaryCta: "See a sample report",
+    h2: "In 5 working days, you'll know what's worth doing — and what isn't.",
   },
   footer: {
     line1: "Noordstar is a product of Lumina Fortuna",
@@ -292,31 +323,39 @@ const en = {
 
 const nl: typeof en = {
   meta: {
-    title: "Noordstar — AI Opportunity Report | Win uren terug met uw huidige team",
+    title:
+      "Noordstar — Ontdek wat AI daadwerkelijk voor uw bedrijf kan doen | Onafhankelijk advies in gewone taal voor het MKB",
     description:
-      "Onafhankelijke analyse voor het MKB: ontdek welke taken zelfstandig kunnen verlopen, welke niet, en waar u moet beginnen — geleverd binnen 5 werkdagen.",
+      "Vertel ons hoe uw bedrijf werkt. Wij laten u in gewone taal zien waar AI u tijd of geld kan besparen, waar het de moeite niet waard is, en wat u als eerste moet doen — geleverd binnen 5 werkdagen.",
   },
   nav: {
     whatYouGet: "Wat u krijgt",
-    method: "Methode",
-    howItWorks: "Werkwijze",
+    method: "Bewijs",
+    howItWorks: "Hoe het werkt",
     pricing: "Prijzen",
     faq: "FAQ",
-    cta: "Vraag uw rapport aan",
+    cta: "Vraag uw plan aan",
   },
   hero: {
-    primaryCta: "Vraag uw AI Opportunity Report aan — €295",
-    secondaryCta: "Bekijk een voorbeeldrapport",
+    eyebrow: "Voor ondernemers die steeds over AI horen",
+    primaryCta: "Ontdek wat AI voor u kan doen — €295",
+    secondaryCta: "Bekijk een voorbeeldplan",
+    reassurance:
+      "U hoeft niets van AI te weten. Geen verkoopgesprekken. Geen bureau-pitch.",
     trust:
       "Beoordeeld door een naamgetekende analist · Geleverd binnen 5 werkdagen · 100% onafhankelijk — wij verkopen geen implementatie",
     variants: {
+      default: {
+        h1: "Niet zeker wat AI daadwerkelijk voor uw bedrijf kan betekenen?",
+        sub: "Dat zoeken wij precies voor u uit. Vertel ons hoe uw bedrijf werkt — wij vertellen u, in gewone taal, waar AI u tijd of geld kan besparen, waar het de moeite niet waard is, en wat u als eerste moet doen.",
+      },
       staff: {
         h1: "Personeelstekort? Een deel van dat werk heeft geen mens nodig.",
-        sub: "Routinematige e-mails beantwoorden, offertes opstellen, facturen achterna bellen, planningen maken — wij analyseren uw bedrijf en laten zien welke van deze taken zelfstandig kunnen verlopen, welke niet, en waar u moet beginnen. U implementeert met wie u zelf kiest.",
+        sub: "Routinematige e-mails beantwoorden, offertes opstellen, facturen achterna bellen, planningen maken — wij laten zien welke van deze taken zelfstandig kunnen verlopen, welke niet, en precies waar u moet beginnen. U kiest zelf wie u helpt het te bouwen.",
       },
       admin: {
         h1: "Offertes, facturen, formulieren, follow-ups — hoeveel van uw week is administratie?",
-        sub: "Wij brengen uw processen in kaart en laten precies zien welke taken geautomatiseerd kunnen worden — zoals een locatiebezoek omzetten in een schriftelijke offerte, of automatisch betalingsherinneringen versturen — en welke dat eerlijk gezegd niet zouden moeten zijn.",
+        sub: "Wij brengen in kaart hoe uw bedrijf daadwerkelijk werkt en laten precies zien welke taken geautomatiseerd kunnen worden — zoals een locatiebezoek omzetten in een schriftelijke offerte, of automatisch betalingsherinneringen versturen — en welke dat eerlijk gezegd niet zouden moeten zijn.",
       },
       time: {
         h1: "Beantwoordt u nog steeds elke klant-e-mail zelf?",
@@ -327,101 +366,127 @@ const nl: typeof en = {
         sub: "Gegevens overtypen tussen systemen, handmatige planning, facturen die te laat de deur uitgaan — wij sporen de lekken in uw processen op en rangschikken de oplossingen op wat ze u daadwerkelijk opleveren.",
       },
       leaks: {
-        h1: "Een offerte die 3 dagen te laat wordt verstuurd, is een verloren klant.",
+        h1: "Een offerte die drie dagen te laat wordt verstuurd, is een verloren klant.",
         sub: "Trage offertes, vergeten follow-ups, late facturen — wij laten zien welke hiervan met eenvoudige automatisering op te lossen zijn, welke juist procesveranderingen nodig hebben, en wat u als eerste moet aanpakken.",
-      },
-      ai: {
-        h1: "Weet precies waar AI in uw bedrijf rendement oplevert — en waar niet.",
-        sub: "Een professionele analyse voor het MKB. U legt uit hoe uw bedrijf werkt. Wij leveren een geprioriteerd rapport dat laat zien waar u tijd en geld verliest, welke AI-kansen de moeite waard zijn — en een stapsgewijs plan om in actie te komen. Geen verkoopgesprekken. Geen implementatie-agenda.",
       },
     },
   },
-  familiar: {
-    h2: "Herkenbaar?",
-    intro: "De meeste MKB-ondernemers die wij spreken herkennen minstens drie van deze:",
-    cards: [
-      "Uw beste mensen besteden een uur per dag aan administratie in plaats van aan klanten.",
-      "Offertes duren dagen voordat ze de deur uitgaan. Klanten wachten niet langer.",
-      "Dezelfde klantvragen, keer op keer beantwoord — door uzelf.",
-      "Facturen gaan te laat de deur uit, herinneringen worden vergeten. Het geld is er wel; het komt alleen te laat binnen.",
-      "U wilt groeien, maar komt niet los van de dagelijkse gang van zaken.",
+  recognition: {
+    h2: "Herkent u iets hiervan?",
+    items: [
+      "U besteedt uren aan dingen die repetitief aanvoelen.",
+      "Uw team kopieert informatie van het ene systeem naar het andere.",
+      "Offertes, e-mails of documenten duren langer dan zou moeten.",
+      "Klanten stellen steeds weer dezelfde vragen.",
+      "U heeft ChatGPT geprobeerd — maar weet niet zeker wat AI verder nog zou kunnen doen.",
+      "Iedereen lijkt “aan AI te doen”, en u vraagt zich af of u achterblijft.",
     ],
     closing:
-      "U kunt geen personeel vinden. Maar u kunt wel uren terugwinnen van het team dat u al heeft. Een deel van dit werk kan zelfstandig verlopen — een deel niet, en dat forceren zou een vergissing zijn. Het verschil kennen is precies wat het AI Opportunity Report u geeft: wat u moet veranderen, wat u met rust moet laten, en waar u moet beginnen. Dit rapport voorkomt een fout van €20.000 met een beslissing van €295.",
+      "Herkende u drie of meer hiervan? Dan is er vrijwel zeker iets te vinden dat de moeite waard is. Dat is onze taak.",
+  },
+  process: {
+    h2: "Zo werkt het — en dat is echt zo simpel.",
+    steps: [
+      {
+        title: "U vertelt ons over uw bedrijf",
+        text: "een gestructureerde vragenlijst, ±35 minuten, in gewone taal. Wat u doet, hoe het werk verloopt, wat u frustreert.",
+      },
+      {
+        title: "Wij analyseren het",
+        text: "met een gestructureerde methode en geavanceerde AI-tools. Een naamgetekende menselijke specialist beoordeelt elke aanbeveling voordat deze bij u terechtkomt.",
+      },
+      {
+        title: "U krijgt een helder plan",
+        text: "wat de moeite waard is, wat niet, wat u als eerste moet doen, en precies hoe u het voor elkaar krijgt — zelf of met een leverancier van uw keuze.",
+      },
+    ],
+  },
+  example: {
+    h2: "Zo ziet dat er in de praktijk uit",
+    turns: [
+      {
+        label: "U vertelt ons",
+        text: "“Twee mensen op mijn kantoor besteden elke week uren aan het opstellen van offertes.”",
+      },
+      {
+        label: "Wij onderzoeken",
+        text: "welke informatie zij gebruiken, wat elke keer terugkomt, waar menselijk oordeel nodig is — en wat veilig zelfstandig kan verlopen.",
+      },
+      {
+        label: "U ontvangt",
+        text: "“Dit deel kan geautomatiseerd worden. Dit deel kan dat beter niet. Hier is de aanbevolen opzet, hoe lastig het is, welke tools u moet bekijken — en wat u moet vragen aan het bedrijf dat het installeert.”",
+      },
+    ],
+    closing: "Die duidelijkheid — voor elke grote tijdvreter in uw bedrijf.",
   },
   whatYouGet: {
-    h2: "Eén rapport. Elke beslissing die u nodig heeft.",
+    h2: "Dit heeft u na 5 dagen in handen",
     cards: [
       {
-        title: "Executive Dashboard",
-        line: "uw kansenscore en topprioriteit, op pagina één",
+        title: "Uw resultaten in één oogopslag",
+        line: "alles belangrijks op één pagina",
       },
       {
-        title: "Impact × Inspanning Matrix",
-        line: "doe dit eerst, doe dit later, doe dit nooit",
+        title: "Wat u als eerste moet doen",
+        line: "en wat u volledig kunt overslaan",
       },
       {
-        title: "Waar AI helpt — en waar niet",
-        line: "inclusief oplossingen zonder AI wanneer dat het eerlijke antwoord is",
+        title: "Waar AI helpt",
+        line: "en waar eerlijk gezegd niet",
       },
       {
-        title: "90-dagen Routekaart",
-        line: "in volgorde, beginnend met snelle overwinningen",
+        title: "Uw eerste 90 dagen",
+        line: "in de juiste volgorde, snelle overwinningen eerst",
       },
       {
-        title: "Implementatiepakket",
-        line: "checklists, leverancierseisen en de vragen die u aan elke leverancier moet stellen",
+        title: "Uw stapsgewijze plan",
+        line: "helder genoeg om aan elke leverancier te geven",
       },
       {
-        title: "Uw Volgende 3 Beslissingen",
-        line: "de laatste pagina vertelt u precies wat u moet doen",
+        title: "De vragen die u moet stellen",
+        line: "zodat geen leverancier u kan overvragen",
       },
     ],
     insideLabel: "Een kijkje in het rapport",
+    carouselNote: "Zie precies wat uw plan bevat, voordat u bestelt.",
     slides: [
       { title: "Executive Dashboard", caption: "Kansenscore & topprioriteit" },
       { title: "Impact × Inspanning Matrix", caption: "Wat eerst — en wat nooit" },
       { title: "90-dagen Routekaart", caption: "In volgorde, met snelle overwinningen eerst" },
     ],
   },
-  method: {
-    h2: "De Noordstar-methode™",
-    steps: [
-      { title: "Begrijpen", line: "we brengen in kaart hoe uw bedrijf daadwerkelijk werkt, op basis van uw briefing" },
-      { title: "Diagnosticeren", line: "we identificeren waar tijd en geld weglekken" },
-      { title: "Prioriteren", line: "elke kans gerangschikt op impact × inspanning" },
-      { title: "Ontwerpen", line: "routekaart en blauwdruk voor wat de moeite waard is" },
-      { title: "Beslissen", line: "heldere beslissingen — inclusief wat u NIET moet doen" },
-    ],
-    closing:
-      "Elk rapport volgt hetzelfde controleerbare proces. Dat is het verschil tussen een methodiek en een mening.",
+  independence: {
+    h2: "Wij hebben u daarna niets anders te verkopen. Dat is precies het punt.",
+    body: "Genoeg bureaus bieden gratis “AI-scans” aan — en hun conclusie is altijd dat u het bureau nodig heeft. Wij implementeren niet, wij verkopen geen software, wij werken niet op basis van retainers. Wij verkopen één ding: eerlijk, onafhankelijk advies. Als het beste antwoord voor uw bedrijf is “sla AI over, verbeter uw proces” — dan is dat precies wat uw plan zal zeggen.",
   },
-  buying: {
-    h2: "Dit is geen antwoord van een chatbot.",
-    intro: "Iedereen kan een AI algemene vragen stellen. Wat u hier koopt is anders:",
+  timeline: {
+    h2: "Van “geen idee” naar “volledig helder” in 5 werkdagen",
+    steps: [
+      { title: "Bestellen", line: "beveiligd betalen met iDEAL. Bedrijfsnaam + KVK-nummer, klaar." },
+      { title: "Vertel ons over uw bedrijf", line: "±35 min vragenlijst, op elk moment op te slaan." },
+      {
+        title: "Dag 1",
+        line: "u ontvangt een eerste snapshot: hoe wij uw bedrijf begrijpen + de grootste kans die wij zien. (Niet wat u verwachtte? Volledige terugbetaling, zonder vragen.)",
+      },
+      { title: "Dag 3–5", line: "uw volledige plan komt binnen, beoordeeld en ondertekend door uw analist." },
+      { title: "Het is van u", line: "voer het zelf uit, of geef het aan een leverancier. Geen verplichtingen." },
+    ],
+  },
+  proof: {
+    h2: "Waarom u op het antwoord kunt vertrouwen",
+    intro:
+      "Elk plan volgt dezelfde methode — de Noordstar-methode™: Begrijpen → Diagnosticeren → Prioriteren → Ontwerpen → Beslissen. Hetzelfde gestructureerde, consistente proces voor elk bedrijf. AI helpt ons snel te werken; een naamgetekende specialist bepaalt wat u bereikt.",
+    steps: ["Begrijpen", "Diagnosticeren", "Prioriteren", "Ontwerpen", "Beslissen"],
+    tableTitle: "Waarom dit geen antwoord van ChatGPT is",
     tableHead: { generic: "Algemene AI-chat", noordstar: "Noordstar" },
     rows: [
-      { generic: "Algemene antwoorden", noordstar: "Analyse van uw bedrijf, gebaseerd op uw briefing" },
-      { generic: "Geen context", noordstar: "Gestructureerde intake over processen, systemen, mensen en doelen" },
-      { generic: "Geen prioriteiten", noordstar: "Gerangschikt op impact × inspanning, met een “doe dit nooit”-lijst" },
-      { generic: "Geen plan", noordstar: "Routekaart, blauwdruk en implementatiepakket" },
-      { generic: "Geen verantwoording", noordstar: "Gestandaardiseerde methode, beoordeling door een menselijke expert, naamgetekende analist op elk rapport" },
+      { generic: "Algemene antwoorden", noordstar: "Analyse op basis van hoe uw bedrijf daadwerkelijk werkt" },
+      { generic: "Geen context", noordstar: "Een gestructureerde intake — uw processen, systemen, mensen en doelen" },
+      { generic: "Geen prioriteiten", noordstar: "Gerangschikt op wat de moeite waard is — met een duidelijke “sla dit over”-lijst" },
+      { generic: "Geen plan", noordstar: "Een stapsgewijze routekaart en implementatiepakket" },
+      { generic: "Geen verantwoording", noordstar: "Eén consistente methode, beoordeeld door een naamgetekende menselijke specialist" },
     ],
     closing: "AI helpt ons snel te werken. Een specialist bepaalt wat u bereikt.",
-  },
-  independence: {
-    h2: "Wij hebben u daarna niets te verkopen.",
-    body: "Wij implementeren niet, wij verkopen geen software, wij werken niet op basis van retainers. Ons enige product is eerlijk advies. Als het beste antwoord voor uw bedrijf is “verbeter uw proces, sla AI over” — dan is dat precies wat uw rapport zal zeggen.",
-  },
-  howItWorks: {
-    h2: "Van bestelling tot duidelijkheid in 5 werkdagen.",
-    steps: [
-      { title: "Bestellen", line: "beveiligde checkout (iDEAL), bedrijfsgegevens vereist" },
-      { title: "Briefing", line: "gestructureerde vragenlijst, ±35 minuten, op elk moment op te slaan" },
-      { title: "Dag 1", line: "Business Snapshot: onze eerste analyse van uw bedrijf en topkans" },
-      { title: "Dag 3–5", line: "Volledig rapport, beoordeeld en ondertekend door uw analist" },
-      { title: "Blijvend van u", line: "implementeer zelf of met een leverancier van uw keuze" },
-    ],
   },
   pricing: {
     h2: "Prijzen",
@@ -429,25 +494,24 @@ const nl: typeof en = {
       title: "AI Opportunity Report",
       price: "€295",
       bullets: [
-        "Volledig diagnostisch rapport",
-        "Executive dashboard & scores",
-        "Impact × Inspanning matrix",
-        "90-dagen routekaart",
-        "Implementatiepakket",
-        "Dag-1 Business Snapshot",
-        "Beoordeling door naamgetekende analist",
+        "Uw resultaten in één oogopslag",
+        "Wat u als eerste moet doen — en wat u kunt overslaan",
+        "Waar AI helpt (en waar niet)",
+        "Uw eerste 90 dagen",
+        "Uw stapsgewijze plan",
+        "De vragen die u aan elke leverancier moet stellen",
       ],
       badge: "Betalen met iDEAL",
       guarantee:
         "Lees uw Dag-1 Snapshot. Voldoet deze niet aan uw verwachting: volledige terugbetaling, zonder vragen.",
-      cta: "Vraag uw AI Opportunity Report aan — €295",
+      cta: "Ontdek wat AI voor u kan doen — €295",
     },
     plus: {
-      title: "Report Plus",
+      title: "Plan Plus",
       price: "€495",
       description:
-        "alles uit het Rapport, plus één schriftelijke Q&A-ronde en een vergelijking van een shortlist leveranciers.",
-      cta: "Vraag Report Plus aan — €495",
+        "alles uit het plan, plus één schriftelijke Q&A-ronde en een vergelijking van een shortlist leveranciers.",
+      cta: "Vraag Plan Plus aan — €495",
     },
     note: "B2B-product — bedrijfsnaam en KVK-nummer vereist bij het afrekenen.",
   },
@@ -464,14 +528,12 @@ const nl: typeof en = {
       { q: "Wie schrijft het rapport?", a: "Gegenereerd met AI-ondersteuning, beoordeeld en goedgekeurd door een naamgetekende specialist vóór levering." },
       { q: "Hoe worden mijn gegevens behandeld?", a: "Vertrouwelijk, AVG/GDPR-conform, nooit gebruikt voor andere klanten." },
       { q: "Voor welke bedrijfsgrootte is dit bedoeld?", a: "MKB, ongeveer 5–100 medewerkers." },
-      { q: "Kan ik achteraf vragen stellen?", a: "Eén schriftelijke Q&A-ronde is inbegrepen bij Report Plus." },
+      { q: "Kan ik achteraf vragen stellen?", a: "Eén schriftelijke Q&A-ronde is inbegrepen bij Plan Plus." },
       { q: "Hoe zit het met terugbetalingen?", a: "Onze Snapshot-garantie: als de Dag-1 Snapshot niet aan de verwachting voldoet, volledige terugbetaling. Dit is een B2B-product." },
     ],
   },
   finalCta: {
-    h2: "Over 5 dagen weet u precies wat u moet doen.",
-    primaryCta: "Vraag uw AI Opportunity Report aan — €295",
-    secondaryCta: "Bekijk een voorbeeldrapport",
+    h2: "Over 5 werkdagen weet u wat de moeite waard is — en wat niet.",
   },
   footer: {
     line1: "Noordstar is een product van Lumina Fortuna",
