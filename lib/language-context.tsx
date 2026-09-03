@@ -21,7 +21,7 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 const STORAGE_KEY = "noordstar-lang";
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Language>("nl");
+  const [lang, setLangState] = useState<Language>("en");
 
   useEffect(() => {
     const stored = window.localStorage.getItem(STORAGE_KEY);

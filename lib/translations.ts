@@ -1,10 +1,20 @@
 export type Language = "en" | "nl";
 
+export type HeroVariantKey =
+  | "staff"
+  | "admin"
+  | "time"
+  | "margin"
+  | "leaks"
+  | "ai";
+
+export const DEFAULT_HERO_VARIANT: HeroVariantKey = "staff";
+
 const en = {
   meta: {
-    title: "Noordstar — AI Opportunity Report for SMEs | Independent AI advice",
+    title: "Noordstar — AI Opportunity Report | Win back hours from your team",
     description:
-      "A professional, independent analysis for SMEs: where AI will pay off in your business, where it won't, and a step-by-step blueprint to act. Delivered in 5 working days.",
+      "Independent analysis for SMEs: find out which tasks can run on their own, which can't, and where to start — delivered in 5 working days.",
   },
   nav: {
     whatYouGet: "What you get",
@@ -15,18 +25,49 @@ const en = {
     cta: "Get your report",
   },
   hero: {
-    h1: "Know exactly where AI will pay off in your business — and where it won't.",
-    sub: "A professional analysis for SMEs. You explain how your company works. We deliver a prioritized report showing where you lose time and money, which AI opportunities are worth pursuing — and a step-by-step blueprint to act. No sales calls. No implementation agenda.",
     primaryCta: "Get your AI Opportunity Report — €295",
     secondaryCta: "See a sample report",
     trust:
       "Reviewed by a named analyst · Delivered in 5 working days · 100% independent — we don't sell implementation",
+    variants: {
+      staff: {
+        h1: "Short on staff? Some of that work doesn't need a person.",
+        sub: "Answering routine emails, drafting quotes, chasing invoices, planning jobs — we analyze your business and show which of these can run on their own, which can't, and where to start. You implement with anyone you choose.",
+      },
+      admin: {
+        h1: "Quotes, invoices, forms, follow-ups — how much of your week is admin?",
+        sub: "We map your processes and show exactly which tasks can be automated — like turning a site visit into a written quote, or sending payment reminders automatically — and which honestly shouldn't be.",
+      },
+      time: {
+        h1: "Still answering every customer email yourself?",
+        sub: "Routine questions, appointment scheduling, order updates — we identify what can run without you, what shouldn't, and the exact steps to hand it over. So you get your week back.",
+      },
+      margin: {
+        h1: "Can't raise prices? Then stop paying for wasted hours.",
+        sub: "Re-typing data between systems, manual planning, invoices that go out late — we find the leaks in your processes and rank the fixes by what they'll actually save you.",
+      },
+      leaks: {
+        h1: "A quote sent 3 days late is a customer lost.",
+        sub: "Slow quotes, forgotten follow-ups, late invoices — we show which of these can be fixed with simple automation, which need process changes instead, and what to do first.",
+      },
+      ai: {
+        h1: "Know exactly where AI will pay off in your business — and where it won't.",
+        sub: "A professional analysis for SMEs. You explain how your company works. We deliver a prioritized report showing where you lose time and money, which AI opportunities are worth pursuing — and a step-by-step blueprint to act. No sales calls. No implementation agenda.",
+      },
+    },
   },
-  problem: {
-    h2: "Everyone says “use AI.” Nobody tells you where.",
-    body: "You know AI matters. But between the hype, the tools, and agencies selling their own solutions, one question never gets answered honestly: what is actually worth doing in your business — and what's a waste of money? Free “AI scans” are everywhere. Their conclusion is always the same: hire the agency that made the scan.",
-    highlight:
-      "This report prevents a €20,000 mistake with a €295 decision.",
+  familiar: {
+    h2: "Sound familiar?",
+    intro: "Most SME owners we talk to recognize at least three of these:",
+    cards: [
+      "Your best people spend an hour a day on admin instead of on customers.",
+      "Quotes take days to go out. Customers stop waiting.",
+      "The same customer questions, answered again and again — by you.",
+      "Invoices go out late, reminders get forgotten. The money exists; it just arrives late.",
+      "You want to grow, but you can't get out of the day-to-day.",
+    ],
+    closing:
+      "You can't find staff. But you can win back hours from the team you already have. Some of this work can run on its own — some of it can't, and forcing it would be a mistake. Knowing the difference is exactly what the AI Opportunity Report gives you: what to change, what to leave alone, and what to do first. This report prevents a €20,000 mistake with a €295 decision.",
   },
   whatYouGet: {
     h2: "One report. Every decision you need.",
@@ -134,6 +175,10 @@ const en = {
     h2: "Frequently asked questions",
     items: [
       { q: "Do I need to understand AI?", a: "No. You explain your business; we do the rest." },
+      {
+        q: "What language is the report in?",
+        a: "Reports, the briefing and all communication are in English. You're welcome to answer briefing questions in Dutch — we read Dutch fine. The report itself is delivered in clear, jargon-free English.",
+      },
       { q: "Is this a sales funnel for consulting?", a: "No. There is nothing else to buy. That's the point." },
       { q: "What if AI isn't right for my business?", a: "Then the report says so, and shows what to do instead." },
       { q: "Who writes the report?", a: "Generated with AI support, reviewed and approved by a named specialist before delivery." },
@@ -247,9 +292,9 @@ const en = {
 
 const nl: typeof en = {
   meta: {
-    title: "Noordstar — AI Opportunity Report voor het MKB | Onafhankelijk AI-advies",
+    title: "Noordstar — AI Opportunity Report | Win uren terug met uw huidige team",
     description:
-      "Een professionele, onafhankelijke analyse voor het MKB: waar AI rendement oplevert in uw bedrijf, waar niet, en een stapsgewijs plan om in actie te komen. Geleverd binnen 5 werkdagen.",
+      "Onafhankelijke analyse voor het MKB: ontdek welke taken zelfstandig kunnen verlopen, welke niet, en waar u moet beginnen — geleverd binnen 5 werkdagen.",
   },
   nav: {
     whatYouGet: "Wat u krijgt",
@@ -260,18 +305,49 @@ const nl: typeof en = {
     cta: "Vraag uw rapport aan",
   },
   hero: {
-    h1: "Weet precies waar AI in uw bedrijf rendement oplevert — en waar niet.",
-    sub: "Een professionele analyse voor het MKB. U legt uit hoe uw bedrijf werkt. Wij leveren een geprioriteerd rapport dat laat zien waar u tijd en geld verliest, welke AI-kansen de moeite waard zijn — en een stapsgewijs plan om in actie te komen. Geen verkoopgesprekken. Geen implementatie-agenda.",
     primaryCta: "Vraag uw AI Opportunity Report aan — €295",
     secondaryCta: "Bekijk een voorbeeldrapport",
     trust:
       "Beoordeeld door een naamgetekende analist · Geleverd binnen 5 werkdagen · 100% onafhankelijk — wij verkopen geen implementatie",
+    variants: {
+      staff: {
+        h1: "Personeelstekort? Een deel van dat werk heeft geen mens nodig.",
+        sub: "Routinematige e-mails beantwoorden, offertes opstellen, facturen achterna bellen, planningen maken — wij analyseren uw bedrijf en laten zien welke van deze taken zelfstandig kunnen verlopen, welke niet, en waar u moet beginnen. U implementeert met wie u zelf kiest.",
+      },
+      admin: {
+        h1: "Offertes, facturen, formulieren, follow-ups — hoeveel van uw week is administratie?",
+        sub: "Wij brengen uw processen in kaart en laten precies zien welke taken geautomatiseerd kunnen worden — zoals een locatiebezoek omzetten in een schriftelijke offerte, of automatisch betalingsherinneringen versturen — en welke dat eerlijk gezegd niet zouden moeten zijn.",
+      },
+      time: {
+        h1: "Beantwoordt u nog steeds elke klant-e-mail zelf?",
+        sub: "Routinevragen, afspraken inplannen, orderupdates — wij bepalen wat zonder u kan verlopen, wat niet, en de exacte stappen om het over te dragen. Zo krijgt u uw week terug.",
+      },
+      margin: {
+        h1: "Kunt u de prijzen niet verhogen? Stop dan met betalen voor verspilde uren.",
+        sub: "Gegevens overtypen tussen systemen, handmatige planning, facturen die te laat de deur uitgaan — wij sporen de lekken in uw processen op en rangschikken de oplossingen op wat ze u daadwerkelijk opleveren.",
+      },
+      leaks: {
+        h1: "Een offerte die 3 dagen te laat wordt verstuurd, is een verloren klant.",
+        sub: "Trage offertes, vergeten follow-ups, late facturen — wij laten zien welke hiervan met eenvoudige automatisering op te lossen zijn, welke juist procesveranderingen nodig hebben, en wat u als eerste moet aanpakken.",
+      },
+      ai: {
+        h1: "Weet precies waar AI in uw bedrijf rendement oplevert — en waar niet.",
+        sub: "Een professionele analyse voor het MKB. U legt uit hoe uw bedrijf werkt. Wij leveren een geprioriteerd rapport dat laat zien waar u tijd en geld verliest, welke AI-kansen de moeite waard zijn — en een stapsgewijs plan om in actie te komen. Geen verkoopgesprekken. Geen implementatie-agenda.",
+      },
+    },
   },
-  problem: {
-    h2: "Iedereen zegt “gebruik AI.” Niemand vertelt u waar.",
-    body: "U weet dat AI ertoe doet. Maar tussen de hype, de tools en bureaus die hun eigen oplossingen verkopen, wordt één vraag nooit eerlijk beantwoord: wat is écht de moeite waard in uw bedrijf — en wat is weggegooid geld? Gratis “AI-scans” zijn overal. Hun conclusie is altijd hetzelfde: huur het bureau in dat de scan heeft gemaakt.",
-    highlight:
-      "Dit rapport voorkomt een fout van €20.000 met een beslissing van €295.",
+  familiar: {
+    h2: "Herkenbaar?",
+    intro: "De meeste MKB-ondernemers die wij spreken herkennen minstens drie van deze:",
+    cards: [
+      "Uw beste mensen besteden een uur per dag aan administratie in plaats van aan klanten.",
+      "Offertes duren dagen voordat ze de deur uitgaan. Klanten wachten niet langer.",
+      "Dezelfde klantvragen, keer op keer beantwoord — door uzelf.",
+      "Facturen gaan te laat de deur uit, herinneringen worden vergeten. Het geld is er wel; het komt alleen te laat binnen.",
+      "U wilt groeien, maar komt niet los van de dagelijkse gang van zaken.",
+    ],
+    closing:
+      "U kunt geen personeel vinden. Maar u kunt wel uren terugwinnen van het team dat u al heeft. Een deel van dit werk kan zelfstandig verlopen — een deel niet, en dat forceren zou een vergissing zijn. Het verschil kennen is precies wat het AI Opportunity Report u geeft: wat u moet veranderen, wat u met rust moet laten, en waar u moet beginnen. Dit rapport voorkomt een fout van €20.000 met een beslissing van €295.",
   },
   whatYouGet: {
     h2: "Eén rapport. Elke beslissing die u nodig heeft.",
@@ -379,6 +455,10 @@ const nl: typeof en = {
     h2: "Veelgestelde vragen",
     items: [
       { q: "Moet ik AI begrijpen?", a: "Nee. U legt uw bedrijf uit; wij doen de rest." },
+      {
+        q: "In welke taal is het rapport?",
+        a: "Rapporten, de briefing en alle communicatie zijn in het Engels. U mag de briefingvragen gerust in het Nederlands beantwoorden — wij lezen prima Nederlands. Het rapport zelf wordt geleverd in helder Engels, zonder jargon.",
+      },
       { q: "Is dit een verkooptrechter voor consultancy?", a: "Nee. Er is niets anders te koop. Dat is precies het punt." },
       { q: "Wat als AI niet geschikt is voor mijn bedrijf?", a: "Dan staat dat in het rapport, met een alternatief." },
       { q: "Wie schrijft het rapport?", a: "Gegenereerd met AI-ondersteuning, beoordeeld en goedgekeurd door een naamgetekende specialist vóór levering." },

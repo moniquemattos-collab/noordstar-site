@@ -1,12 +1,33 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/language-context";
 import { useModal } from "@/lib/modal-context";
+import { DEFAULT_HERO_VARIANT, type HeroVariantKey } from "@/lib/translations";
 import { NorthStar } from "./NorthStar";
+
+const VARIANT_KEYS: HeroVariantKey[] = [
+  "staff",
+  "admin",
+  "time",
+  "margin",
+  "leaks",
+  "ai",
+];
 
 export function Hero() {
   const { t } = useLanguage();
   const { openReserve, openSample } = useModal();
+  const [variant, setVariant] = useState<HeroVariantKey>(DEFAULT_HERO_VARIANT);
+
+  useEffect(() => {
+    const param = new URLSearchParams(window.location.search).get("v");
+    if (param && (VARIANT_KEYS as string[]).includes(param)) {
+      setVariant(param as HeroVariantKey);
+    }
+  }, []);
+
+  const { h1, sub } = t.hero.variants[variant];
 
   return (
     <section
@@ -20,11 +41,11 @@ export function Hero() {
         </div>
 
         <h1 className="max-w-3xl font-serif text-4xl leading-[1.15] tracking-tight sm:text-5xl md:text-6xl">
-          {t.hero.h1}
+          {h1}
         </h1>
 
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-ivory/80 sm:text-lg">
-          {t.hero.sub}
+          {sub}
         </p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">

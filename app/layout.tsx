@@ -21,24 +21,24 @@ const siteUrl = "https://noordstar.nl";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Noordstar — AI Opportunity Report for SMEs | Independent AI advice",
+  title: "Noordstar — AI Opportunity Report | Win back hours from your team",
   description:
-    "A professional, independent analysis for SMEs: where AI will pay off in your business, where it won't, and a step-by-step blueprint to act. Delivered in 5 working days.",
+    "Independent analysis for SMEs: find out which tasks can run on their own, which can't, and where to start — delivered in 5 working days.",
   openGraph: {
-    title: "Noordstar — AI Opportunity Report for SMEs | Independent AI advice",
+    title: "Noordstar — AI Opportunity Report | Win back hours from your team",
     description:
-      "A professional, independent analysis for SMEs: where AI will pay off, where it won't, and a step-by-step blueprint to act.",
+      "Independent analysis for SMEs: find out which tasks can run on their own, which can't, and where to start.",
     url: siteUrl,
     siteName: "Noordstar",
-    locale: "nl_NL",
-    alternateLocale: "en_US",
+    locale: "en_US",
+    alternateLocale: "nl_NL",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Noordstar — AI Opportunity Report for SMEs",
+    title: "Noordstar — AI Opportunity Report | Win back hours from your team",
     description:
-      "Independent analysis for SMEs: where AI will pay off, where it won't, and a step-by-step blueprint to act.",
+      "Independent analysis for SMEs: find out which tasks can run on their own, which can't, and where to start.",
   },
   icons: {
     icon: "/favicon.svg",
@@ -51,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="nl" className={`${serif.variable} ${sans.variable}`}>
+    <html lang="en" className={`${serif.variable} ${sans.variable}`}>
       <body className="font-sans antialiased">
         {/*
           Analytics placeholder.
