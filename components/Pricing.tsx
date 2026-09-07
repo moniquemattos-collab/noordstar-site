@@ -1,12 +1,11 @@
 "use client";
 
 import { useLanguage } from "@/lib/language-context";
-import { useModal } from "@/lib/modal-context";
+import { QUICK_FIX_FORM_URL } from "@/lib/constants";
 import { CompassMark } from "./CompassMark";
 
 export function Pricing() {
   const { t } = useLanguage();
-  const { openReserve } = useModal();
 
   return (
     <section id="pricing" className="bg-cream">
@@ -36,13 +35,14 @@ export function Pricing() {
             ))}
           </ul>
 
-          <button
-            type="button"
-            onClick={() => openReserve()}
-            className="mt-8 w-full rounded-full bg-accent px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent-dark"
+          <a
+            href={QUICK_FIX_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 block w-full rounded-full bg-accent px-6 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:bg-accent-dark"
           >
             {t.pricing.cta}
-          </button>
+          </a>
         </div>
 
         <p className="mt-8 text-center text-sm text-ink/50">{t.pricing.note}</p>

@@ -1,12 +1,11 @@
 "use client";
 
 import { useLanguage } from "@/lib/language-context";
-import { useModal } from "@/lib/modal-context";
+import { QUICK_FIX_FORM_URL } from "@/lib/constants";
 import { CompassMark } from "./CompassMark";
 
 export function Hero() {
   const { t } = useLanguage();
-  const { openReserve } = useModal();
 
   return (
     <section id="top" className="relative overflow-hidden bg-cream">
@@ -29,13 +28,14 @@ export function Hero() {
         </p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-          <button
-            type="button"
-            onClick={() => openReserve()}
+          <a
+            href={QUICK_FIX_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-accent px-7 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:text-base"
           >
             {t.hero.primaryCta}
-          </button>
+          </a>
           <a
             href="#the-product"
             className="rounded-full border border-ink/20 px-7 py-4 text-center text-sm font-semibold text-ink transition-colors hover:border-ink/40 sm:text-base"

@@ -4,7 +4,6 @@ import { ModalProvider } from "@/lib/modal-context";
 import { useLanguage } from "@/lib/language-context";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import { ReserveModal } from "./ReserveModal";
 
 type Section = { h: string; p: string };
 
@@ -56,7 +55,6 @@ export function LegalPage({
         </div>
       </main>
       <Footer />
-      <ReserveModal />
     </ModalProvider>
   );
 }

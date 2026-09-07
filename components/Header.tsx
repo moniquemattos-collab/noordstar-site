@@ -2,12 +2,11 @@
 
 import { useState } from "react";
 import { useLanguage } from "@/lib/language-context";
-import { useModal } from "@/lib/modal-context";
+import { QUICK_FIX_FORM_URL } from "@/lib/constants";
 import { CompassMark } from "./CompassMark";
 
 export function Header() {
   const { t, lang, setLang } = useLanguage();
-  const { openReserve } = useModal();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
@@ -63,13 +62,14 @@ export function Header() {
             </button>
           </div>
 
-          <button
-            type="button"
-            onClick={() => openReserve()}
+          <a
+            href={QUICK_FIX_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:inline-block"
           >
             {t.hero.primaryCta}
-          </button>
+          </a>
 
           <button
             type="button"
@@ -122,16 +122,15 @@ export function Header() {
                 {t.langToggle.en}
               </button>
             </div>
-            <button
-              type="button"
-              onClick={() => {
-                setMenuOpen(false);
-                openReserve();
-              }}
+            <a
+              href={QUICK_FIX_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMenuOpen(false)}
               className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white"
             >
               {t.hero.primaryCta}
-            </button>
+            </a>
           </div>
         </div>
       )}

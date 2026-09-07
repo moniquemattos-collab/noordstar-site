@@ -1,12 +1,11 @@
 "use client";
 
 import { useLanguage } from "@/lib/language-context";
-import { useModal } from "@/lib/modal-context";
+import { QUICK_FIX_FORM_URL } from "@/lib/constants";
 import { CompassMark } from "./CompassMark";
 
 export function FinalCTA() {
   const { t } = useLanguage();
-  const { openReserve } = useModal();
 
   return (
     <section className="bg-ink text-cream">
@@ -18,13 +17,14 @@ export function FinalCTA() {
         <p className="mt-4 max-w-xl text-base text-cream/70 sm:text-lg">
           {t.finalCta.sub}
         </p>
-        <button
-          type="button"
-          onClick={() => openReserve()}
+        <a
+          href={QUICK_FIX_FORM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="mt-10 rounded-full bg-accent px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:text-base"
         >
           {t.hero.primaryCta}
-        </button>
+        </a>
       </div>
     </section>
   );

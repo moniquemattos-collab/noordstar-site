@@ -1,12 +1,11 @@
 "use client";
 
 import { useLanguage } from "@/lib/language-context";
-import { useModal } from "@/lib/modal-context";
+import { QUICK_FIX_FORM_URL } from "@/lib/constants";
 import { CompassMark } from "./CompassMark";
 
 export function ProductDemo() {
   const { t } = useLanguage();
-  const { openReserve } = useModal();
   const d = t.productDemo;
 
   return (
@@ -78,13 +77,14 @@ export function ProductDemo() {
 
         <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
           <p className="text-base font-medium text-ink sm:text-lg">{d.closing}</p>
-          <button
-            type="button"
-            onClick={() => openReserve()}
+          <a
+            href={QUICK_FIX_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="shrink-0 rounded-full bg-accent px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent-dark"
           >
             {t.hero.primaryCta}
-          </button>
+          </a>
         </div>
       </div>
     </section>
