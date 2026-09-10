@@ -30,8 +30,6 @@ export function Hero() {
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <a
             href={QUICK_FIX_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="rounded-full bg-accent px-7 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:text-base"
           >
             {t.hero.primaryCta}

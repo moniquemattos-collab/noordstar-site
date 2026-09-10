@@ -79,8 +79,6 @@ export function ProductDemo() {
           <p className="text-base font-medium text-ink sm:text-lg">{d.closing}</p>
           <a
             href={QUICK_FIX_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="shrink-0 rounded-full bg-accent px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent-dark"
           >
             {t.hero.primaryCta}

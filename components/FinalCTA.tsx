@@ -19,8 +19,6 @@ export function FinalCTA() {
         </p>
         <a
           href={QUICK_FIX_FORM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
           className="mt-10 rounded-full bg-accent px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:text-base"
         >
           {t.hero.primaryCta}

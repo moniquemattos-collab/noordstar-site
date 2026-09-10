@@ -20,7 +20,7 @@ const en = {
       "You don't need to understand AI. That's our job. No sales calls, no agency pitch.",
     trust:
       "Reviewed by a named specialist · Delivered within 2 business days · 100% independent — we don't sell implementation",
-    primaryCta: "Tell us the problem — €49",
+    primaryCta: "Tell us your problem →",
     secondaryCta: "See how it works ↓",
   },
   recognition: {
@@ -172,7 +172,7 @@ const en = {
       "Delivered within 2 business days",
       "Not usable? Full refund.",
     ],
-    cta: "Tell us the problem — €49",
+    cta: "Get your Quick Fix — €49 →",
     note: "B2B — company name and KVK number at checkout.",
   },
   faq: {
@@ -210,17 +210,6 @@ const en = {
     privacy: "Privacy Policy",
     terms: "Terms & Disclaimer",
     contactLabel: "Contact",
-  },
-  reserveModal: {
-    title: "Reserve your Quick Fix",
-    intro:
-      "Payment (iDEAL) is being finalized. Leave your details and we'll send you a secure checkout link.",
-    nameLabel: "Full name",
-    companyLabel: "Company",
-    emailLabel: "Work email",
-    submit: "Reserve my spot",
-    success: "Thank you. We've received your details and will be in touch shortly with a secure checkout link.",
-    close: "Close",
   },
   sampleModal: {
     title: "Inside the report",
@@ -320,7 +309,7 @@ const nl: typeof en = {
       "U hoeft AI niet te begrijpen. Dat is onze taak. Geen verkoopgesprekken, geen bureau-pitch.",
     trust:
       "Beoordeeld door een naamgetekende specialist · Geleverd binnen 2 werkdagen · 100% onafhankelijk — wij verkopen geen implementatie",
-    primaryCta: "Vertel ons het probleem — €49",
+    primaryCta: "Vertel ons uw probleem →",
     secondaryCta: "Bekijk hoe het werkt ↓",
   },
   recognition: {
@@ -472,7 +461,7 @@ const nl: typeof en = {
       "Geleverd binnen 2 werkdagen",
       "Niet bruikbaar? Volledige terugbetaling.",
     ],
-    cta: "Vertel ons het probleem — €49",
+    cta: "Vraag uw Quick Fix aan — €49 →",
     note: "B2B — bedrijfsnaam en KVK-nummer bij het afrekenen.",
   },
   faq: {
@@ -510,17 +499,6 @@ const nl: typeof en = {
     privacy: "Privacybeleid",
     terms: "Voorwaarden & Disclaimer",
     contactLabel: "Contact",
-  },
-  reserveModal: {
-    title: "Reserveer uw Quick Fix",
-    intro:
-      "De betaling (iDEAL) wordt momenteel afgerond. Laat uw gegevens achter en wij sturen u een beveiligde betaallink.",
-    nameLabel: "Volledige naam",
-    companyLabel: "Bedrijf",
-    emailLabel: "Zakelijk e-mailadres",
-    submit: "Reserveer mijn plek",
-    success: "Dank u. Wij hebben uw gegevens ontvangen en nemen spoedig contact met u op met een beveiligde betaallink.",
-    close: "Sluiten",
   },
   sampleModal: {
     title: "Een kijkje in het rapport",

@@ -37,8 +37,6 @@ export function Pricing() {
 
           <a
             href={QUICK_FIX_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="mt-8 block w-full rounded-full bg-accent px-6 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:bg-accent-dark"
           >
             {t.pricing.cta}

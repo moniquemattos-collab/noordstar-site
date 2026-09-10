@@ -64,8 +64,6 @@ export function Header() {
 
           <a
             href={QUICK_FIX_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="hidden rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:inline-block"
           >
             {t.hero.primaryCta}
@@ -124,8 +122,6 @@ export function Header() {
             </div>
             <a
               href={QUICK_FIX_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
               className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white"
             >
