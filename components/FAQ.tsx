@@ -41,9 +41,11 @@ export function FAQ() {
                   </span>
                 </button>
                 {isOpen && (
-                  <p className="px-6 pb-5 pr-10 text-sm leading-relaxed text-ink/65 sm:text-base">
-                    {item.a}
-                  </p>
+                  <div className="space-y-3 px-6 pb-5 pr-10 text-sm leading-relaxed text-ink/65 sm:text-base">
+                    {item.a.split("\n\n").map((paragraph, pIdx) => (
+                      <p key={pIdx}>{paragraph}</p>
+                    ))}
+                  </div>
                 )}
               </div>
             );

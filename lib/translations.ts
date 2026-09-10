@@ -187,7 +187,10 @@ const en = {
         q: "What if my problem is actually five problems?",
         a: "We'll tell you honestly. For problems that span the whole business, we offer a broader analysis — we'll propose it if it genuinely fits, never as a default upsell.",
       },
-      { q: "Who writes the plan?", a: "Generated with AI support, reviewed and approved by a named specialist before delivery." },
+      {
+        q: "How is my Quick Fix created?",
+        a: "Every Quick Fix is built using Noordstar's own structured analysis system. We break down your problem, how the work happens today, where the real bottleneck sits, and which practical solutions are actually worth considering.\n\nOur process combines our own methodology with specialist AI tools, current tool and solution research, and human judgment. The final recommendation is reviewed and approved by a named specialist before it reaches you.\n\nThe goal isn't to give you more AI ideas. It's to identify the simplest solution that makes sense for your business — even when the right answer isn't AI.",
+      },
       {
         q: "What language?",
         a: "Reports, the briefing and all communication are in English. You're welcome to answer briefing questions in Dutch — we read Dutch fine. The report itself is delivered in clear, jargon-free English.",
@@ -202,6 +205,16 @@ const en = {
   finalCta: {
     h2: "Start with one annoying problem.",
     sub: "Fifteen minutes from now, it can be our problem instead of yours.",
+  },
+  payment: {
+    h1: "We've got your problem.",
+    subheading: "You're one step away from your Quick Fix.",
+    body: "Complete the secure payment of €59.29 incl. VAT to start your analysis.",
+    cta: "Complete secure payment →",
+    supporting1: "We only start working after payment is confirmed.",
+    supporting2: "Your Quick Fix will be delivered within 2 business days.",
+    notReady:
+      "The secure payment link isn't connected yet. Please contact us and we'll help you complete your order.",
   },
   footer: {
     line1: "Noordstar is a product of Lumina Fortuna",
@@ -476,7 +489,10 @@ const nl: typeof en = {
         q: "Wat als mijn probleem eigenlijk vijf problemen zijn?",
         a: "Dat vertellen wij u eerlijk. Voor problemen die uw hele bedrijf raken, bieden wij een bredere analyse aan — wij stellen dit voor als het echt past, nooit als standaard upsell.",
       },
-      { q: "Wie schrijft het plan?", a: "Gegenereerd met AI-ondersteuning, beoordeeld en goedgekeurd door een naamgetekende specialist vóór levering." },
+      {
+        q: "Hoe wordt mijn Quick Fix gemaakt?",
+        a: "Elke Quick Fix wordt gemaakt met Noordstars eigen gestructureerde analysemethode. We brengen uw probleem in kaart: hoe het werk nu verloopt, waar het echte knelpunt zit, en welke praktische oplossingen daadwerkelijk de moeite waard zijn.\n\nOns proces combineert onze eigen methodiek met specialistische AI-tools, actueel onderzoek naar tools en oplossingen, en menselijk inzicht. De uiteindelijke aanbeveling wordt beoordeeld en goedgekeurd door een naamgetekende specialist voordat deze bij u terechtkomt.\n\nHet doel is niet om u nóg meer AI-ideeën te geven. Het doel is de eenvoudigste oplossing te vinden die past bij uw bedrijf — ook als het antwoord geen AI is.",
+      },
       {
         q: "Welke taal?",
         a: "Rapporten, de briefing en alle communicatie zijn in het Engels. U mag de briefingvragen gerust in het Nederlands beantwoorden — wij lezen prima Nederlands. Het rapport zelf wordt geleverd in helder Engels, zonder jargon.",
@@ -491,6 +507,16 @@ const nl: typeof en = {
   finalCta: {
     h2: "Begin met één vervelend probleem.",
     sub: "Over vijftien minuten kan het ons probleem zijn in plaats van het uwe.",
+  },
+  payment: {
+    h1: "We hebben uw probleem ontvangen.",
+    subheading: "U bent nog één stap verwijderd van uw Quick Fix.",
+    body: "Rond de beveiligde betaling van €59,29 incl. btw af om uw analyse te starten.",
+    cta: "Voltooi beveiligde betaling →",
+    supporting1: "Wij starten pas zodra de betaling is bevestigd.",
+    supporting2: "Uw Quick Fix wordt binnen 2 werkdagen geleverd.",
+    notReady:
+      "De beveiligde betaallink is nog niet gekoppeld. Neem contact met ons op, dan helpen wij u verder met uw bestelling.",
   },
   footer: {
     line1: "Noordstar is een product van Lumina Fortuna",
