@@ -81,7 +81,7 @@ const en = {
       },
       {
         title: "We investigate",
-        text: "AI helps us analyse fast; a named human specialist reviews everything before it reaches you.",
+        text: "Noordstar's structured analysis system combines our own methodology, current solution research and specialist AI tools. Every recommendation is reviewed and approved by a named human specialist.",
       },
       {
         title: "Your plan arrives within 2 business days",
@@ -204,7 +204,7 @@ const en = {
   },
   finalCta: {
     h2: "Start with one annoying problem.",
-    sub: "Fifteen minutes from now, it can be our problem instead of yours.",
+    sub: "We'll take it from there.",
   },
   payment: {
     h1: "We've got your problem.",
@@ -217,9 +217,13 @@ const en = {
       "The secure payment link isn't connected yet. Please contact us and we'll help you complete your order.",
   },
   footer: {
-    line1: "Noordstar is a product of Lumina Fortuna",
-    kvk: "KVK [number]",
-    btw: "BTW [number]",
+    line1: "Noordstar is operated by Lumina Fortuna",
+    kvk: "KvK 96199954",
+    // VAT number intentionally blank: historical records conflict, so it's
+    // withheld from the customer-facing footer until confirmed. Footer.tsx
+    // only renders this bullet when it's non-empty — fill it in here once
+    // the correct number is confirmed and it will reappear automatically.
+    btw: "",
     privacy: "Privacy Policy",
     terms: "Terms & Disclaimer",
     contactLabel: "Contact",
@@ -233,7 +237,7 @@ const en = {
     title: "Privacy Policy",
     updated: "Last updated: [date] — draft, pending legal review",
     intro:
-      "This Privacy Policy explains how Lumina Fortuna (“Noordstar”, “we”, “us”) collects, uses and protects information in connection with the Noordstar AI Opportunity Report.",
+      "This Privacy Policy explains how Lumina Fortuna (KvK 96199954), operating as “Noordstar” (“we”, “us”), collects, uses and protects information in connection with the Noordstar AI Opportunity Report.",
     sections: [
       {
         h: "1. Data we collect",
@@ -261,7 +265,7 @@ const en = {
     title: "Terms & Disclaimer",
     updated: "Last updated: [date] — draft, pending legal review",
     intro:
-      "These Terms govern the purchase and use of the Noordstar AI Opportunity Report, a product of Lumina Fortuna (“Noordstar”, “we”, “us”). By ordering a report, you agree to the terms below. [Placeholder — this document is a template pending review by qualified legal counsel.]",
+      "These Terms govern the purchase and use of the Noordstar AI Opportunity Report, a product of Lumina Fortuna (KvK 96199954), operating as “Noordstar” (“we”, “us”). By ordering a report, you agree to the terms below. [Placeholder — this document is a template pending review by qualified legal counsel.]",
     sections: [
       {
         h: "1. Nature of the service",
@@ -383,7 +387,7 @@ const nl: typeof en = {
       },
       {
         title: "Wij onderzoeken",
-        text: "AI helpt ons snel te analyseren; een naamgetekende menselijke specialist beoordeelt alles voordat het bij u terechtkomt.",
+        text: "Noordstars gestructureerde analysesysteem combineert onze eigen methodiek, actueel oplossingsonderzoek en specialistische AI-tools. Elke aanbeveling wordt beoordeeld en goedgekeurd door een naamgetekende specialist.",
       },
       {
         title: "Uw plan komt binnen 2 werkdagen",
@@ -506,7 +510,7 @@ const nl: typeof en = {
   },
   finalCta: {
     h2: "Begin met één vervelend probleem.",
-    sub: "Over vijftien minuten kan het ons probleem zijn in plaats van het uwe.",
+    sub: "Wij zoeken uit wat u eraan kunt doen.",
   },
   payment: {
     h1: "We hebben uw probleem ontvangen.",
@@ -519,9 +523,11 @@ const nl: typeof en = {
       "De beveiligde betaallink is nog niet gekoppeld. Neem contact met ons op, dan helpen wij u verder met uw bestelling.",
   },
   footer: {
-    line1: "Noordstar is een product van Lumina Fortuna",
-    kvk: "KVK [nummer]",
-    btw: "BTW [nummer]",
+    line1: "Noordstar is een handelsnaam van Lumina Fortuna",
+    kvk: "KvK 96199954",
+    // BTW-nummer bewust leeg: historische gegevens spreken elkaar tegen,
+    // dus wordt dit pas getoond zodra het juiste nummer is bevestigd.
+    btw: "",
     privacy: "Privacybeleid",
     terms: "Voorwaarden & Disclaimer",
     contactLabel: "Contact",
@@ -535,7 +541,7 @@ const nl: typeof en = {
     title: "Privacybeleid",
     updated: "Laatst bijgewerkt: [datum] — concept, in afwachting van juridische toetsing",
     intro:
-      "Dit privacybeleid legt uit hoe Lumina Fortuna (“Noordstar”, “wij”, “ons”) informatie verzamelt, gebruikt en beschermt in verband met het Noordstar AI Opportunity Report.",
+      "Dit privacybeleid legt uit hoe Lumina Fortuna (KvK 96199954), handelend onder de naam “Noordstar” (“wij”, “ons”), informatie verzamelt, gebruikt en beschermt in verband met het Noordstar AI Opportunity Report.",
     sections: [
       {
         h: "1. Gegevens die wij verzamelen",
@@ -563,7 +569,7 @@ const nl: typeof en = {
     title: "Voorwaarden & Disclaimer",
     updated: "Laatst bijgewerkt: [datum] — concept, in afwachting van juridische toetsing",
     intro:
-      "Deze voorwaarden zijn van toepassing op de aankoop en het gebruik van het Noordstar AI Opportunity Report, een product van Lumina Fortuna (“Noordstar”, “wij”, “ons”). Door een rapport te bestellen, gaat u akkoord met onderstaande voorwaarden. [Placeholder — dit document is een concept in afwachting van toetsing door gekwalificeerd juridisch advies.]",
+      "Deze voorwaarden zijn van toepassing op de aankoop en het gebruik van het Noordstar AI Opportunity Report, een product van Lumina Fortuna (KvK 96199954), handelend onder de naam “Noordstar” (“wij”, “ons”). Door een rapport te bestellen, gaat u akkoord met onderstaande voorwaarden. [Placeholder — dit document is een concept in afwachting van toetsing door gekwalificeerd juridisch advies.]",
     sections: [
       {
         h: "1. Aard van de dienstverlening",

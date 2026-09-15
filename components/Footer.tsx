@@ -18,8 +18,12 @@ export function Footer() {
           <span>{t.footer.line1}</span>
           <span aria-hidden="true">·</span>
           <span>{t.footer.kvk}</span>
-          <span aria-hidden="true">·</span>
-          <span>{t.footer.btw}</span>
+          {t.footer.btw && (
+            <>
+              <span aria-hidden="true">·</span>
+              <span>{t.footer.btw}</span>
+            </>
+          )}
           <span aria-hidden="true">·</span>
           <a href="/privacy" className="underline-offset-2 hover:underline">
             {t.footer.privacy}
