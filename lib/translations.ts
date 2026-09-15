@@ -4,7 +4,7 @@ const en = {
   meta: {
     title: "Noordstar — One business problem. One practical AI fix. €49",
     description:
-      "Describe one thing that's wasting time in your business. Get a short, practical plan within 2 business days — reviewed by a named specialist. €49, full refund if it's not useful.",
+      "Describe one thing that's wasting time in your business. Get a short, practical plan within 3 business days — reviewed by a named specialist. €49, full refund if it's not useful.",
   },
   nav: {
     product: "Example",
@@ -19,7 +19,7 @@ const en = {
     reassurance:
       "You don't need to understand AI. That's our job. No sales calls, no agency pitch.",
     trust:
-      "Reviewed by a named specialist · Delivered within 2 business days · 100% independent — we don't sell implementation",
+      "Reviewed by a named specialist · Delivered within 3 business days · 100% independent — we don't sell implementation",
     primaryCta: "Tell us your problem →",
     secondaryCta: "See how it works ↓",
   },
@@ -46,7 +46,7 @@ const en = {
   productDemo: {
     h2: "One problem. One practical fix. €49.",
     intro:
-      "You describe one thing that's wasting your time. Within 2 business days you get a short, practical plan — reviewed by a named specialist. Here's a real example:",
+      "You describe one thing that's wasting your time. Within 3 business days you get a short, practical plan — reviewed by a named specialist. Here's a real example:",
     cardLabel: "Quick Fix plan · Sample",
     problemLabel: "The problem",
     problemText:
@@ -84,7 +84,7 @@ const en = {
         text: "Noordstar's structured analysis system combines our own methodology, current solution research and specialist AI tools. Every recommendation is reviewed and approved by a named human specialist.",
       },
       {
-        title: "Your plan arrives within 2 business days",
+        title: "Your plan arrives within 3 business days",
         text: "what we found, what we'd do, how to do it yourself, what it'll cost, what NOT to do, and when you'd need professional help.",
       },
     ],
@@ -169,7 +169,7 @@ const en = {
       "Step-by-step, do-it-yourself instructions",
       "What it'll cost and what NOT to buy",
       "Reviewed by a named specialist",
-      "Delivered within 2 business days",
+      "Delivered within 3 business days",
       "Not usable? Full refund.",
     ],
     cta: "Get your Quick Fix — €49 →",
@@ -212,7 +212,7 @@ const en = {
     body: "Complete the secure payment of €59.29 incl. VAT to start your analysis.",
     cta: "Complete secure payment →",
     supporting1: "We only start working after payment is confirmed.",
-    supporting2: "Your Quick Fix will be delivered within 2 business days.",
+    supporting2: "Your Quick Fix will be delivered within 3 business days.",
     notReady:
       "The secure payment link isn't connected yet. Please contact us and we'll help you complete your order.",
   },
@@ -222,13 +222,13 @@ const en = {
     body: [
       "Your Quick Fix request and payment are complete.",
       "We'll now analyse the problem you described using Noordstar's structured analysis system, then a specialist will review the recommendation before it reaches you.",
-      "Your personalised Quick Fix will be delivered to the email address you provided within 2 business days.",
+      "Your personalised Quick Fix will be delivered to the email address you provided within 3 business days.",
     ],
     checklist: [
       "Payment complete",
       "No call or meeting needed",
       "Reviewed by a human specialist",
-      "Delivered by email within 2 business days",
+      "Delivered by email within 3 business days",
     ],
     closingLine1: "Nothing else to do for now.",
     closingLine2: "We'll take it from here.",
@@ -328,7 +328,7 @@ const nl: typeof en = {
   meta: {
     title: "Noordstar — Eén bedrijfsprobleem. Eén praktische AI-oplossing. €49",
     description:
-      "Beschrijf één ding dat tijd kost in uw bedrijf. Ontvang binnen 2 werkdagen een kort, praktisch plan — beoordeeld door een naamgetekende specialist. €49, volledige terugbetaling als het niet bruikbaar is.",
+      "Beschrijf één ding dat tijd kost in uw bedrijf. Ontvang binnen 3 werkdagen een kort, praktisch plan — beoordeeld door een naamgetekende specialist. €49, volledige terugbetaling als het niet bruikbaar is.",
   },
   nav: {
     product: "Voorbeeld",
@@ -343,7 +343,7 @@ const nl: typeof en = {
     reassurance:
       "U hoeft AI niet te begrijpen. Dat is onze taak. Geen verkoopgesprekken, geen bureau-pitch.",
     trust:
-      "Beoordeeld door een naamgetekende specialist · Geleverd binnen 2 werkdagen · 100% onafhankelijk — wij verkopen geen implementatie",
+      "Beoordeeld door een naamgetekende specialist · Geleverd binnen 3 werkdagen · 100% onafhankelijk — wij verkopen geen implementatie",
     primaryCta: "Vertel ons uw probleem →",
     secondaryCta: "Bekijk hoe het werkt ↓",
   },
@@ -370,7 +370,7 @@ const nl: typeof en = {
   productDemo: {
     h2: "Eén probleem. Eén praktische oplossing. €49.",
     intro:
-      "U beschrijft één ding dat uw tijd kost. Binnen 2 werkdagen ontvangt u een kort, praktisch plan — beoordeeld door een naamgetekende specialist. Hier is een echt voorbeeld:",
+      "U beschrijft één ding dat uw tijd kost. Binnen 3 werkdagen ontvangt u een kort, praktisch plan — beoordeeld door een naamgetekende specialist. Hier is een echt voorbeeld:",
     cardLabel: "Quick Fix-plan · Voorbeeld",
     problemLabel: "Het probleem",
     problemText:
@@ -408,7 +408,7 @@ const nl: typeof en = {
         text: "Noordstars gestructureerde analysesysteem combineert onze eigen methodiek, actueel oplossingsonderzoek en specialistische AI-tools. Elke aanbeveling wordt beoordeeld en goedgekeurd door een naamgetekende specialist.",
       },
       {
-        title: "Uw plan komt binnen 2 werkdagen",
+        title: "Uw plan komt binnen 3 werkdagen",
         text: "wat wij vonden, wat wij zouden doen, hoe u het zelf kunt uitvoeren, wat het kost, wat u NIET moet doen, en wanneer u een professional nodig heeft.",
       },
     ],
@@ -493,7 +493,7 @@ const nl: typeof en = {
       "Stapsgewijze, zelf uit te voeren instructies",
       "Wat het kost en wat u NIET moet kopen",
       "Beoordeeld door een naamgetekende specialist",
-      "Geleverd binnen 2 werkdagen",
+      "Geleverd binnen 3 werkdagen",
       "Niet bruikbaar? Volledige terugbetaling.",
     ],
     cta: "Vraag uw Quick Fix aan — €49 →",
@@ -536,7 +536,7 @@ const nl: typeof en = {
     body: "Rond de beveiligde betaling van €59,29 incl. btw af om uw analyse te starten.",
     cta: "Voltooi beveiligde betaling →",
     supporting1: "Wij starten pas zodra de betaling is bevestigd.",
-    supporting2: "Uw Quick Fix wordt binnen 2 werkdagen geleverd.",
+    supporting2: "Uw Quick Fix wordt binnen 3 werkdagen geleverd.",
     notReady:
       "De beveiligde betaallink is nog niet gekoppeld. Neem contact met ons op, dan helpen wij u verder met uw bestelling.",
   },
@@ -546,13 +546,13 @@ const nl: typeof en = {
     body: [
       "Uw Quick Fix-aanvraag en betaling zijn compleet.",
       "We analyseren nu het probleem dat u heeft beschreven met Noordstars gestructureerde analysesysteem, waarna een specialist de aanbeveling beoordeelt voordat deze bij u terechtkomt.",
-      "Uw persoonlijke Quick Fix wordt binnen 2 werkdagen geleverd op het e-mailadres dat u heeft opgegeven.",
+      "Uw persoonlijke Quick Fix wordt binnen 3 werkdagen geleverd op het e-mailadres dat u heeft opgegeven.",
     ],
     checklist: [
       "Betaling voltooid",
       "Geen gesprek of afspraak nodig",
       "Beoordeeld door een menselijke specialist",
-      "Geleverd per e-mail binnen 2 werkdagen",
+      "Geleverd per e-mail binnen 3 werkdagen",
     ],
     closingLine1: "Verder hoeft u nu niets te doen.",
     closingLine2: "Wij nemen het van hier over.",

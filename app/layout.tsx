@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Noordstar — One business problem. One practical AI fix. €49",
   description:
-    "Describe one thing that's wasting time in your business. Get a short, practical plan within 2 business days — reviewed by a named specialist. €49, full refund if it's not useful.",
+    "Describe one thing that's wasting time in your business. Get a short, practical plan within 3 business days — reviewed by a named specialist. €49, full refund if it's not useful.",
   openGraph: {
     title: "Noordstar — One business problem. One practical AI fix. €49",
     description:
-      "A short, practical plan for one specific problem — reviewed by a named specialist, delivered within 2 business days.",
+      "A short, practical plan for one specific problem — reviewed by a named specialist, delivered within 3 business days.",
     url: siteUrl,
     siteName: "Noordstar",
     locale: "en_US",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Noordstar — One business problem. One practical AI fix. €49",
     description:
-      "A short, practical plan for one specific problem — reviewed by a named specialist, delivered within 2 business days.",
+      "A short, practical plan for one specific problem — reviewed by a named specialist, delivered within 3 business days.",
   },
   icons: {
     icon: "/favicon.svg",
