@@ -216,6 +216,24 @@ const en = {
     notReady:
       "The secure payment link isn't connected yet. Please contact us and we'll help you complete your order.",
   },
+  paymentSuccess: {
+    eyebrow: "Payment confirmed",
+    h1: "We've got it. We're on it.",
+    body: [
+      "Your Quick Fix request and payment are complete.",
+      "We'll now analyse the problem you described using Noordstar's structured analysis system, then a specialist will review the recommendation before it reaches you.",
+      "Your personalised Quick Fix will be delivered to the email address you provided within 2 business days.",
+    ],
+    checklist: [
+      "Payment complete",
+      "No call or meeting needed",
+      "Reviewed by a human specialist",
+      "Delivered by email within 2 business days",
+    ],
+    closingLine1: "Nothing else to do for now.",
+    closingLine2: "We'll take it from here.",
+    backLink: "Back to Noordstar",
+  },
   footer: {
     line1: "Noordstar is operated by Lumina Fortuna",
     kvk: "KvK 96199954",
@@ -521,6 +539,24 @@ const nl: typeof en = {
     supporting2: "Uw Quick Fix wordt binnen 2 werkdagen geleverd.",
     notReady:
       "De beveiligde betaallink is nog niet gekoppeld. Neem contact met ons op, dan helpen wij u verder met uw bestelling.",
+  },
+  paymentSuccess: {
+    eyebrow: "Betaling bevestigd",
+    h1: "We hebben het. We gaan ermee aan de slag.",
+    body: [
+      "Uw Quick Fix-aanvraag en betaling zijn compleet.",
+      "We analyseren nu het probleem dat u heeft beschreven met Noordstars gestructureerde analysesysteem, waarna een specialist de aanbeveling beoordeelt voordat deze bij u terechtkomt.",
+      "Uw persoonlijke Quick Fix wordt binnen 2 werkdagen geleverd op het e-mailadres dat u heeft opgegeven.",
+    ],
+    checklist: [
+      "Betaling voltooid",
+      "Geen gesprek of afspraak nodig",
+      "Beoordeeld door een menselijke specialist",
+      "Geleverd per e-mail binnen 2 werkdagen",
+    ],
+    closingLine1: "Verder hoeft u nu niets te doen.",
+    closingLine2: "Wij nemen het van hier over.",
+    backLink: "Terug naar Noordstar",
   },
   footer: {
     line1: "Noordstar is een handelsnaam van Lumina Fortuna",
