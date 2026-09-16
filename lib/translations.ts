@@ -73,7 +73,7 @@ const en = {
     steps: [
       {
         title: "Tell us the problem",
-        text: "describe it in your own words, plus a few quick questions (which tools you use, how often it happens). ±5 minutes.",
+        text: "describe it in your own words, plus a few quick questions (which tools you use, how often it happens, and who's likely to implement the fix). ±5 minutes.",
       },
       {
         title: "Pay €49",
@@ -190,6 +190,10 @@ const en = {
       {
         q: "How is my Quick Fix created?",
         a: "Every Quick Fix is built using Noordstar's own structured analysis system. We break down your problem, how the work happens today, where the real bottleneck sits, and which practical solutions are actually worth considering.\n\nOur process combines our own methodology with specialist AI tools, current tool and solution research, and human judgment. The final recommendation is reviewed and approved by a named specialist before it reaches you.\n\nThe goal isn't to give you more AI ideas. It's to identify the simplest solution that makes sense for your business — even when the right answer isn't AI.",
+      },
+      {
+        q: "Will the solution match my technical skill level?",
+        a: "The solution fits you — not just the problem. Tell us who's going to implement it and how technical they are. If you're doing it yourself, we'll keep the recommendation realistic for your level. If a technical person will implement it, we can recommend a more advanced setup when that genuinely makes sense.",
       },
       {
         q: "What language?",
@@ -397,7 +401,7 @@ const nl: typeof en = {
     steps: [
       {
         title: "Vertel ons het probleem",
-        text: "beschrijf het in uw eigen woorden, plus een paar korte vragen (welke tools u gebruikt, hoe vaak het voorkomt). ±5 minuten.",
+        text: "beschrijf het in uw eigen woorden, plus een paar korte vragen (welke tools u gebruikt, hoe vaak het voorkomt, en wie de oplossing waarschijnlijk gaat doorvoeren). ±5 minuten.",
       },
       {
         title: "Betaal €49",
@@ -514,6 +518,10 @@ const nl: typeof en = {
       {
         q: "Hoe wordt mijn Quick Fix gemaakt?",
         a: "Elke Quick Fix wordt gemaakt met Noordstars eigen gestructureerde analysemethode. We brengen uw probleem in kaart: hoe het werk nu verloopt, waar het echte knelpunt zit, en welke praktische oplossingen daadwerkelijk de moeite waard zijn.\n\nOns proces combineert onze eigen methodiek met specialistische AI-tools, actueel onderzoek naar tools en oplossingen, en menselijk inzicht. De uiteindelijke aanbeveling wordt beoordeeld en goedgekeurd door een naamgetekende specialist voordat deze bij u terechtkomt.\n\nHet doel is niet om u nóg meer AI-ideeën te geven. Het doel is de eenvoudigste oplossing te vinden die past bij uw bedrijf — ook als het antwoord geen AI is.",
+      },
+      {
+        q: "Past de oplossing bij mijn technische niveau?",
+        a: "De oplossing past bij ú — niet alleen bij het probleem. Vertel ons wie de oplossing gaat doorvoeren en hoe technisch diegene is. Doet u het zelf? Dan houden we de aanbeveling realistisch voor uw niveau. Voert een technisch persoon het door? Dan kunnen we een geavanceerdere aanpak voorstellen, als dat écht beter is.",
       },
       {
         q: "Welke taal?",
