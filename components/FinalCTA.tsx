@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/lib/language-context";
 import { QUICK_FIX_FORM_URL } from "@/lib/constants";
+import { trackEvent } from "@/lib/analytics";
 import { CompassMark } from "./CompassMark";
 
 export function FinalCTA() {
@@ -19,6 +20,7 @@ export function FinalCTA() {
         </p>
         <a
           href={QUICK_FIX_FORM_URL}
+          onClick={() => trackEvent("cta_click", { location: "final_cta" })}
           className="mt-10 rounded-full bg-accent px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:text-base"
         >
           {t.hero.primaryCta}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { SITE_URL } from "@/lib/constants";
 import { LanguageProvider } from "@/lib/language-context";
 import "./globals.css";
 
@@ -17,10 +18,8 @@ const sans = Inter({
   display: "swap",
 });
 
-const siteUrl = "https://noordstar.nl";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: "Noordstar — One business problem. One practical AI fix. €49",
   description:
     "Describe one thing that's wasting time in your business. Get a short, practical plan within 3 business days — reviewed by a named specialist. €49, full refund if it's not useful.",
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
     title: "Noordstar — One business problem. One practical AI fix. €49",
     description:
       "A short, practical plan for one specific problem — reviewed by a named specialist, delivered within 3 business days.",
-    url: siteUrl,
+    url: SITE_URL,
     siteName: "Noordstar",
     locale: "en_US",
     alternateLocale: "nl_NL",
@@ -43,6 +42,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  // Google Search Console verification (HTML tag method). Once you've
+  // added the noordstar.nl property in Search Console and it offers you
+  // a meta tag like <meta name="google-site-verification" content="XXXX">,
+  // paste just the content value below and uncomment:
+  // verification: { google: "XXXX" },
 };
 
 export default function RootLayout({

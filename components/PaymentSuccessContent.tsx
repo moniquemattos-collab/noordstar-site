@@ -1,6 +1,8 @@
 "use client";
 
+import { useEffect } from "react";
 import { useLanguage } from "@/lib/language-context";
+import { trackEvent } from "@/lib/analytics";
 import { Footer } from "./Footer";
 import { CompassMark } from "./CompassMark";
 import { IconCheck } from "./icons";
@@ -8,6 +10,15 @@ import { IconCheck } from "./icons";
 export function PaymentSuccessContent() {
   const { t, lang, setLang } = useLanguage();
   const p = t.paymentSuccess;
+
+  // Fires once per page view. This page is only reached after a completed
+  // Mollie payment, so a view here is the best available proxy for
+  // "purchase confirmed" in this codebase — distinct from "cta_click" so a
+  // click on a CTA is never counted as a completed purchase. No order,
+  // payment or personal data is attached.
+  useEffect(() => {
+    trackEvent("purchase_confirmed");
+  }, []);
 
   return (
     <>

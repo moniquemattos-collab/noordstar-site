@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/lib/language-context";
 import { QUICK_FIX_FORM_URL } from "@/lib/constants";
+import { trackEvent } from "@/lib/analytics";
 import { CompassMark } from "./CompassMark";
 
 export function Pricing() {
@@ -37,6 +38,7 @@ export function Pricing() {
 
           <a
             href={QUICK_FIX_FORM_URL}
+            onClick={() => trackEvent("cta_click", { location: "pricing" })}
             className="mt-8 block w-full rounded-full bg-accent px-6 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:bg-accent-dark"
           >
             {t.pricing.cta}

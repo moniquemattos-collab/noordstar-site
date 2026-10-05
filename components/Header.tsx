@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { useLanguage } from "@/lib/language-context";
 import { QUICK_FIX_FORM_URL } from "@/lib/constants";
+import { trackEvent } from "@/lib/analytics";
+import { getPublishedPosts } from "@/lib/blog";
 import { CompassMark } from "./CompassMark";
 
 export function Header() {
@@ -14,6 +16,8 @@ export function Header() {
     { href: "#how-it-works", label: t.nav.howItWorks },
     { href: "#pricing", label: t.nav.pricing },
     { href: "#faq", label: t.nav.faq },
+    // Only shown once at least one blog post is published — see lib/blog.ts.
+    ...(getPublishedPosts().length > 0 ? [{ href: "/blog", label: "Blog" }] : []),
   ];
 
   return (
@@ -64,6 +68,7 @@ export function Header() {
 
           <a
             href={QUICK_FIX_FORM_URL}
+            onClick={() => trackEvent("cta_click", { location: "header" })}
             className="hidden rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:inline-block"
           >
             {t.hero.primaryCta}
@@ -122,7 +127,10 @@ export function Header() {
             </div>
             <a
               href={QUICK_FIX_FORM_URL}
-              onClick={() => setMenuOpen(false)}
+              onClick={() => {
+                trackEvent("cta_click", { location: "header_mobile" });
+                setMenuOpen(false);
+              }}
               className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white"
             >
               {t.hero.primaryCta}

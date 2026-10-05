@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/lib/language-context";
 import { QUICK_FIX_FORM_URL } from "@/lib/constants";
+import { trackEvent } from "@/lib/analytics";
 import { CompassMark } from "./CompassMark";
 
 export function ProductDemo() {
@@ -79,6 +80,7 @@ export function ProductDemo() {
           <p className="text-base font-medium text-ink sm:text-lg">{d.closing}</p>
           <a
             href={QUICK_FIX_FORM_URL}
+            onClick={() => trackEvent("cta_click", { location: "product_demo" })}
             className="shrink-0 rounded-full bg-accent px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent-dark"
           >
             {t.hero.primaryCta}
